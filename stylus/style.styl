@@ -4,3 +4,300 @@
 @import '_components'
 @import '_media'
 
+
+body 
+  font-family $body-font
+  
+
+.wrapper
+.section__head__slider 
+  width 100%
+  margin 0 auto
+  max-width 1920px
+
+
+.section__head__slider
+  min-width 1170px
+  margin 0 auto
+
+  
+a:active 
+  box-shadow inset 0 0 3px black
+  
+
+.header
+  padding 25px 0 0 0
+  
+ 
+  &__title 
+    display: none
+  &-wrapper 
+    .toggle-menu
+      background: blue
+      width 50px 
+      height @width
+  &__responsive
+    background: grey2
+    padding-right 20px
+    display: none
+    &__str
+      font-size 14px
+      position: relative
+      top 3px
+      vertical-align bottom
+      span 
+        font-size 24px
+        vertical-align bottom
+        position relative 
+        top 8px
+  &__right 
+    .str24 
+      display: block
+    .button 
+      margin-top 3px
+  &__top 
+    p 
+      color grey
+      line-height 20px
+      
+
+.main-menu
+  height 70px
+  padding-top 20px
+
+
+  
+  &__item
+    margin-right 35px
+    &_active 
+      a
+        color black
+        +after()
+          margin-top 5px 
+          trs()
+          background: orange
+          height 4px
+  &__link 
+    font-size 26px 
+    font-weight bold
+    text-decoration none
+    +after('')
+      width 100%
+      height 1px 
+      background: blue
+      display: block
+      trs()
+      margin-top -3px
+    &:hover 
+      color black
+      +after()
+        margin-top 5px 
+        trs()
+        background: orange
+        height 4px
+        
+
+.section 
+  
+
+  &__head
+    padding 60px 0 80px 0
+    position: relative
+
+    
+    &__slider 
+      position absolute
+      top 0px
+      width 100% 
+      left 0px
+      z-index -1
+      height 521px
+    &__title 
+      font-size 40px
+      text-align: center
+      color dark
+      margin 0 0 25px 0
+    &__tabs
+      width 555px
+      margin 0 auto
+      background: rgba(237, 236, 236, 0.83);
+      border-radius 5px
+      margin-bottom 50px
+      span 
+        flex-grow 1
+        text-align: center
+        font-size 22px
+        color blue
+        text-decoration underline
+        height 46px 
+        line-height @height - 3px
+      span.active 
+        position: relative
+        color white 
+        background: orange
+        border-radius(5px)
+        text-decoration none
+        +after('')
+          triangle(40px, 20px, bottom, orange)
+          position absolute
+          bottom: -19px;
+          z-index 1
+          left 40%
+          
+    &__content
+      width 555px
+      background: white
+      margin 0 auto
+      border-radius 4px 
+      overflow hidden
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      input 
+        +placeholder()
+          color #d7d8da
+      
+
+  &__services
+    padding 50px 0
+    
+
+    &__title 
+      font-size 26px
+      line-height 28px
+      margin 10px 0 10px 0
+    &__item 
+      span 
+        display: block
+  
+
+  &__call
+    background: blue
+    
+
+    &__title 
+      color white 
+      font-size 36px
+      margin 0 0 15px 0
+    p 
+      color white
+    &__form 
+      border-radius 5px
+      overflow hidden
+      background: white
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      input
+        +placeholder()
+          color #d7d8da
+    &__bg 
+      background image-url('bg1.png') no-repeat bottom right
+      padding-bottom 60px 
+      padding-top 60px 
+      
+    .button 
+      padding 0 20px
+      
+
+  &__our-services 
+    padding 50px 0 60px 0
+    
+
+    &__link 
+      font-size 26px 
+      font-weight bold
+      display: block
+      margin 20px 0 15px 0
+    h2 
+      margin-bottom 30px
+    &__img
+      border-radius(50%)
+      overflow hidden
+      img 
+        display: block
+        border-radius(50%)
+      
+
+  &__specialist
+    padding 0 0 40px 0
+    
+
+    &__item 
+      padding 20px
+      position: relative
+      &:hover 
+        box-shadow 0 0 0 3px orange
+        trs()
+        .section__specialist__tooltip 
+          width 95px 
+          height @width
+          font-size 14px
+          margin-left 80px
+          margin-bottom 7px
+          span 
+            opacity: 1
+            trs2()
+    &__link 
+      font-size 24px 
+      font-weight bold
+      margin 15px 0
+    &__phone 
+      font-weight bold
+      color dark
+    &__img 
+      position: relative
+      img 
+        display: block
+    &__tooltip
+      background: orange 
+      border-radius (50%)
+      color white
+      width 35px 
+      height @width
+      font-size 0px
+      position absolute
+      bottom 0px 
+      left 0px
+      trs()
+      margin-bottom -14px 
+      margin-left -19px
+      overflow hidden
+      span 
+        opacity: 0
+        color white
+        padding: 22px;
+        line-height: 17px;
+        font-size: 14px;
+        trs2()
+  
+  
+  &__seo
+    
+
+    &-wrapper 
+      padding-bottom 40px
+      h2 
+        margin-bottom 30px
+        
+
+.footer 
+  background: grey2
+  
+
+  &__adr 
+    color dark 
+    font-size 16px
+  &__copy 
+    font-size 14px
+    margin 40px 0 89px 0
+  &__col 
+    padding 30px 0 0px 20px
+  &__phone 
+    font-size 20px
+    margin 40px 0 5px 0
+    &_responsive 
+      display: none
+  .button 
+    margin 0 0 20px 0
+  p 
+    font-size 14px
+    padding 0px
+  a 
+    font-size 14px

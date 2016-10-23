@@ -20,31 +20,33 @@ $body-font = ptsans
 
 
 // Container-wrapper-width 
-$container-wrapper-width = 1240px
+$container-wrapper-width = 1170px
 $container-wrapper-padding = 0 20px
 
 
 // Link - var
 $link-size = 17px
-$link-color = $dark
-$link-hover-color = $hover
+$link-color = $blue
+$link-hover-color = $button-hover
+$link-text-docoration = underline
+$link-text-docoration-hover = none
 
 
 // Text - var
-$text-size = 15px
+$text-size = 16px
 $text-color = $dark
 $text-padding = 20px
 $text-line-height = 23px
 
 
 // Span - var
-$span-size = 14px
+$span-size = 16px
 $span-color = $dark
 
 
 // Heading - sive 
 $h1 = 48px
-$h2 = 48px
+$h2 = 36px
 $h3 = 36px
 $h4 = 24px
 $h5 = 20px
@@ -61,7 +63,7 @@ $col-margin = 30px
 $input-size = 17px
 $input-color = $dark
 $input-background = white
-$input-border-radius = 3px
+$input-border-radius = 0px
 $input-height = 43px
 $input-margin = 10px 0 0 0 
 $label-margin = 0 0 20px 0
@@ -82,18 +84,26 @@ $banner-link-color = $dark
 
 
 // Buttons
-$button-radius = 4px
-$button-height = 43px
-$button-line-height = 41px
+$button-radius = 5px
+$button-height = 53px
 $button-padding = 0 15px
-$button-size = 17px
-$button-color = $dark 
-$button-border = $yellow
-$button-background = $yellow
-$button-hover-color = black 
+$button-size = 22px
+$button-color = white
+$button-border = $blue
+$button-background = $blue
+$button-hover-color = white
 $button-border-hover-color = $button-hover
 $button-background-hover-color = $button-hover
-$button-big-width = 200px
+// Button xl
+$button-xl-width = auto
+$button-xl-height = 200px
+$button-xl-font-size = 18px
+$button-xl-font-weight = normal 
+// Button xs
+$button-xs-width = auto
+$button-xs-height = 23px
+$button-xs-font-size = 14px
+$button-xs-font-weight = bold 
 
 
 // Box sizing
@@ -116,12 +126,12 @@ $placeholderFont = $body-font
 
 
 // Colors
-dark          =  #262626
+dark          =  #282828
 yellow        =  #f5aa00
-blue          =  #f5f8f9
-grey          =  #d7d7d7
+blue          =  #2763b0
+grey          =  #acaaaa
 soft          =  #f7fafc
-orange        =  #f17300
+orange        =  #f39f33
 green         =  #408c09
 purple        =  purple 
 pink          =  pink
@@ -131,10 +141,10 @@ milk          =  #e5e1d0
 gold          =  #d09700
 border        =  #d5d5d5
 border-grey   =  #484848
-button-hover  =  #fcb700
+button-hover  =  #194174
 dash-border   =  #ececec
 // //
-grey2         =  #878787
+grey2         =  #edecec
 grey3         =  #f8f8f8
 
 
@@ -193,13 +203,6 @@ $worning         =  #9c7614
 .jsTabDash
 .jsTab
   cursor pointer
-for i in (1..3)
-  .jsTab{i}
-    cursor pointer
-  .jsCont{i}
-    display none
-  .jsCont{i}.active
-    display block
 .jsCont
 .jsContDash 
   display none
@@ -496,7 +499,7 @@ button
   background $button-background
   border-radius $button-radius
   height $button-height
-  line-height $button-line-height
+  line-height ($button-height - 3px)
   padding $button-padding
   display inline-block
   font-size $button-size
@@ -505,14 +508,24 @@ button
   color $button-color
   border 1px solid $button-border
   -webkit-appearance: none;
+  text-decoration none
   trs()
   &:hover 
     background $button-background-hover-color
     color $button-hover-color
     trs()
     border-color $button-border-hover-color
-.button_big
-  width $button-big-width
+.button_xl
+  width $button-xl-width
+  height $button-xl-height
+  font-size $button-xl-font-size
+  font-weight $button-xl-font-weight
+.button_xs
+  width $button-xs-width
+  height $button-xs-height
+  line-height ($button-xs-height - 3px)
+  font-size $button-xs-font-size
+  font-weight $button-xs-font-weight
 .button_white
   // border-color white
   background-color white
@@ -525,17 +538,20 @@ button
   background: $green
   // color $green
 .button_blue 
-  // border-color $blue
+  border-color $blue
   background: $blue
-  // color $blue
+  color white
 .button_yellow 
   // border-color $yellow 
   background: $yellow 
   // color $yellow
 .button_orange 
-  // border-color $orange
+  border-color $orange
   background: $orange
-  // color $orange
+  color white
+  &:hover 
+    background: #ca6900
+    border-color #ca6900
 .button_grey
   border-color $grey 
   background: $grey 
@@ -596,12 +612,13 @@ span
   font-size $span-size
   color $span-color
 a 
-  text-decoration none
+  text-decoration $link-text-docoration
   display inline-block
   font-size $link-size
   color $link-color
   &:hover 
     color $link-hover-color
+    text-decoration $link-text-docoration-hover
 h1, h2, h3, h4, h5, h6 
   font-weight $h-weight
 .text 
@@ -737,7 +754,7 @@ th
   > span
     width 31px
     height 4px
-    background white
+    background orange
     border none
     border-radius 0px
     display block
@@ -777,17 +794,18 @@ th
   
 
   &__item
-    font-size 15px
+    font-size 14px
     display: inline-block
     a 
-      color dark
-      font-size 15px
+      color blue
+      font-size 14px
+      text-decoration: none
     &:last-child
-      color grey2
+      color black
   &__separator 
     display: inline-block
     margin 0 5px
-    color grey2
+    color blue
     
 
 // Custom scrollbar

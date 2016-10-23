@@ -2,25 +2,15 @@ extends layout
 include mixins.pug
 
 block content
-  +header-menu()
-  section.section__services
+  -var pageId = 1;
+  +header-menu-2()
+  section.section__catalog
     .container-wrapper
-      .row.between
-        .section__services__item
-          .section__services__icon-1 
-          .section__services__title Ведущее агентство <br> Вологды
-          span по продаже жилой 
-          span вторичной недвижимости
-        .section__services__item
-          .section__services__icon-2
-          .section__services__title Оплата только <br> за результат
-          span вы оплачиваете наши услуги 
-          span по факту сделки
-        .section__services__item
-          .section__services__icon-3
-          .section__services__title Отличный сервис <br> и профессионализм
-          span множество реальных отзывов 
-          span довольных клиентов
+      +bread-crumbs([
+        'Главная страница',
+        'Каталог'
+      ])
+      h2 Купить квартиру в Вологде
   section.section__call
     .container-wrapper.section__call__bg
       .row.center.between

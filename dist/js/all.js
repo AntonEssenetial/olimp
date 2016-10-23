@@ -1,41 +1,17 @@
 $(document).ready(function() {
   
   // Active tabs
-  function swithchTabs (tabName, contentTabName, current) {
-    var tab = tabName
-    var contentTab = contentTabName
-    var active = current
-    tab.click(function(){
-      tabName.removeClass(active).eq($(this).index()).addClass(active);
-      contentTab.removeClass(active).eq($(this).index()).addClass(active);
-    });
-  }
-  switchTabs('jsTab', 'jsCont', 'active');
-  switchTabs('jsTab', 'jsContFlex', 'jsFlex');
-  switchTabs('jsTabDash', 'jsContDash', 'active');
-  
-
-  // // popup
-  // var popup = $('.popup')
-  // var close = $('.popup__close')
-  // $('.js__popup').click(function(event) {
-  //   popup.addClass('jsVisible');
-  // });
-  // close.click(function(event) {
-  //   popup.removeClass('jsVisible');
-  //   $(this).closest('.jsVisible').removeClass('jsVisible');
-  // });
-
-  function popup (popup, closePopup, popupVisible) {
-    var popup = popup;
-    var close = closePopup;
-    var popupActive = popupVisible;
-    close.click(function(){
-      popup.removeClass(popupVisible);
-      $(this).closest(popupVisible).removeClass(popupVisible)
-    });
-  }
-  popup('popup','popup__close','jsVisible');
+  function swtch(tab, tabActive, tabContent, parentDiv){
+    var tab = $(tab),
+        tabActive = tabActive,
+        parentEl = $(parentDiv),
+        tabContent = $(tabContent);
+    tab.click(function() {
+      $(this).closest(parentEl).find(tab).removeClass(tabActive).eq($(this).index()).addClass(tabActive);
+      $(this).closest(parentEl).find(tabContent).removeClass(tabActive).eq($(this).index()).addClass(tabActive);
+    }).eq(0)
+  };
+  swtch('.jsTab', 'active', '.jsCont', '.jsParent')
 
 
   // Navgoco acordion
@@ -48,7 +24,7 @@ $(document).ready(function() {
 
 
   // Bx slider
-  var slider = $().bxSlider({
+  var slider = $('.bx-slider-1').bxSlider({
     pager: false,
     controls: false,
     auto: true,
@@ -111,12 +87,15 @@ $(document).ready(function() {
 
   // Height detect funciton
   function heightDetect(){
-    $().css( 
-      'height', $(window).height()
+    $('.section__head__slider, .slide, .bx-slider-1').css( 
+      'height', $('.header-wrapper').height()
     );
   };
   heightDetect();
   $(window).resize(function(){
+    heightDetect();
+  });
+  $(window).load(function(){
     heightDetect();
   });
 
@@ -134,25 +113,12 @@ $(document).ready(function() {
 
 
   // Toggle menu
-  var menu = $()
+  var menu = $('.main-menu')
   $('.jsTag').click(function(event) {
     $(this).toggleClass('active')
     menu.toggleClass('active animated fadeInUp');
     // $('.menu').toggleClass('active animated fadeInUp');
   });
-
-
-  // Custom scroll
-  var scrolVar = $()
-  (function($){
-    $(window).load(function(){
-      scrollVar.mCustomScrollbar({
-        scrollInertia:100,
-        contentTouchScroll: true,
-        autoExpandScrollbar: true
-      });
-    });
-  })(jQuery);
 
 
   // Auto height column function
@@ -195,6 +161,50 @@ $(document).ready(function() {
   $(window).resize(function(){
     equalheight();
   });
+
+
+  function createSlick() {
+    $('.section__specialist').not('.slick-initialized').slick({
+      infinite: true,
+      dots: false,
+      arrows: true,
+      autoplay: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1920,
+          settings: "unslick"
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  }
+  createSlick();
+  $(window).on( 'resize', createSlick );
+
+
+  function menuWidth(menuWidth) {
+    $(menuWidth).css(
+      'width', $(window).width()
+    );
+  }
+
+  function menuWidthSize(){
+    if ($(window).width() <= '760'){
+      menuWidth('.main-menu')
+    } else {
+      $('.main-menu').css('width', 'auto')
+    }
+  }
+  $(window).on('load resize',menuWidthSize);
 
 });
 

@@ -1,0 +1,56 @@
+.header__logo
+  sprite($sprite-logo)
+  static()
+.header__top__icon
+  sprite($sprite-icon-1)
+  margin-right 17px
+.section__services__icon-3
+  sprite($sprite-icon-4)
+.section__services__icon-2
+  sprite($sprite-icon-3)
+.section__services__icon-1
+  sprite($sprite-icon-2)
+
+
+// Footer 
+.footer__phone
+  +after('')
+    sprite($sprite-icon-5)
+    vam(-19px, 0px 0px 0 0px)
+.footer__logo 
+  sprite($sprite-logo2)
+  display: block
+  
+
+// Slick 
+.slick-prev
+  font-size 0px
+  +after('')
+    retinaSprite($sprite_left_group)
+    vam()
+.slick-next
+  font-size 0px 
+  +after('')
+    retinaSprite($sprite_right_group)
+    vam()
+
+
+// Media query 
++width-max(760px)
+  .footer__phone::before
+    content ''
+    sprite($sprite-icon-5)
+    vam(-2px, 0px 10px 0 0px)
+  .header__logo
+    retinaSprite($sprite_logo_group)
+  .header__responsive__str span::after
+    content ''
+    retinaSprite($sprite_icon_group)
+    vam(-4px,0px 0px 0 13px)
+  .section__services__icon-1
+    retinaSprite($sprite_s1_group)
+  .section__services__icon-2
+    retinaSprite($sprite_s2_group)
+  .section__services__icon-3
+    retinaSprite($sprite_s3_group)
+  
