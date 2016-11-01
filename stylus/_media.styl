@@ -1,4 +1,82 @@
 +width-max(1170px)
+  .button_res
+    float none
+  .section__form-wrp_res 
+    flex-direction column
+    .section__filter__main-row
+      justify-content flex-start
+    .col__46
+      width auto
+      &:first-child
+        margin-bottom 20px
+  .section__form-wrapper
+    margin 0 -20px
+  .section__form-wrp p
+    padding-left 0px
+  .section__serv-wrapper .col__60
+    min-height auto
+  .section__serv 
+    h2
+      margin 0px 0 10px 0
+      font-size 30px
+    h3 
+      font-size 20px 
+      margin 5px 0
+  .section__serv ul
+    margin 20px 0 50px 0
+    li 
+      font-size 16px 
+      font-weight normal
+  .section__serv__bg 
+    background-size contain
+  .section__blog
+    .col__80 
+      width 100%
+  .footer > .container-wrapper 
+    width 790px 
+  .col__225
+    display: none
+  .section__catalog__item p
+    margin-top 20px
+  .section__catalog__item__top
+    margin 10px 0
+  .section__catalog__item 
+    margin-bottom 20px
+    h2 
+      line-height 33px 
+      margin-bottom 0px
+  .section__catalog__same-objects
+    .section__filter__result__item
+      &:last-child
+        display: none
+  .col__336
+    width 234px
+    height 44px
+    margin-left 15px
+    &:after 
+      left -15px 
+      border-width: 22.5px 15px 22.5px 0;
+  .section__catalog__item__content
+    padding-left 0px
+  .item__buttons
+    justify-content: flex-start;
+    .button:first-child
+      margin-left 0px
+    .button 
+      height 38px
+      line-height 36px
+  .section__catalog__item__list
+    margin-bottom 2px
+  .section__catalog__item__torg span
+    display: block
+  .section__catalog__item__torg a
+    position relative 
+    top -3px
+    font-size 12px
+  .section__catalog__item__torg span
+    font-size 12px
+  .section__catalog__item__price
+    font-size 22px
   body 
     min-width 320px
   .section__head__slider
@@ -53,7 +131,9 @@
     padding-top 50px 
     padding-bottom 30px 
   .section__call .button
+  .section__call__form .button
     font-size 19px
+    static()
   .form__input_search
   .button_search
     font-size 19px
@@ -66,9 +146,93 @@
       width 75%
   .main-menu
     padding-top 10px
+  .section__call__bg-2
+    padding 18px 60px
+    > .row 
+      flex-direction column
+      align-items: baseline;
+    .col__42
+    .col__40
+      margin-left 140px
+      margin-right 0px
+      margin-top 0px
+      width auto
+    span 
+      display: block
+      line-height 20px
+  .section__filter__main-row
+    flex-wrap wrap
+  .col__105 
+    width 105px !important
+  .section__call__bg-2_reset .col__42, 
+  .section__call__bg-2_reset .col__40
+    margin-left 0px
 
++width-max(980px)
+  .section__filter__link-map
+    display: none
+  .col__200
+    display: none
+  .item-mobile-view .item__like-2, 
+  .item-mobile-view .item-view-2
+    display: block
+  .section__filter__result-view-1
+    .item__link
+      display: none
+  .section__review__item
+    width 100%
+    margin-right 0px
+
+
++width-max(940px)
+  .section__catalog__item
+    .col__50
+      &:last-child
+        width 45%
+      &:first-child
+        width 55%
+
+
++width-max(910px)
+  .section__filter__responsive-row
+    flex-wrap wrap
+    
+
++width-max(850px)
+  .section__review__single > .auto__width
+    .row 
+      flex-direction column
+  .section__review__docs
+    margin-left 0px 
+    margin-top 20px
+
+
++width-max(815px)
+  .section__filter__result-view-2
+    .section__filter__result__item
+      width 225px
+  .item__price
+    font-size 20px
+  .item-view-2 .item__price
+    width 165px
+  .section__team__item
+    width 100%
+  .section__team__items
+    flex-wrap wrap
+    flex-direction column
+  .section__team__left
+    width 80px
+    img 
+      width 100%
+  
+
++width-max(790px)
+  .footer > .container-wrapper
+    width 100%
 
 +width-max(770px)
+  .section__filter__top-row
+    margin-bottom 10px
   .section__specialist__item
     width 48%
     &:nth-child(3)
@@ -76,6 +240,173 @@
     
 
 +width-max(760px)
+  span.main-menu__link
+    position: relative
+    width 100%
+    +after('')
+      triangle(15px, 10px, bottom, white)
+      display: block
+      position absolute
+      right 0px
+      top 6px 
+      margin 10px
+      background: blue !important
+  .main-menu__item:hover
+    span.main-menu__link
+      +after('')
+        triangle(15px, 10px, top, grey2)
+  .main-menu__link:hover,
+  .main-menu__item:hover .main-menu__link
+    color yellow !important
+  .section__call__form .form__input
+    flex-basis: inherit;
+  .main-menu 
+    overflow-y scroll
+  .section__form .form__input_short
+    width 100%
+  .section__form-wrp_res
+    .col_margin
+      margin-right 0px !important
+    .row 
+      flex-direction column
+      align-items flex-start
+    .col__50 
+      width 100% 
+      margin-right 0px
+  .col_margin-2 input 
+    margin-bottom 10px
+  .row_mar
+    margin-bottom 10px
+    flex-direction column
+  .section__serv ul
+    margin 20px 0 0px 0
+  .section__form-wrp
+    flex-direction column
+    .auto__width 
+      display: none
+    .col__395
+      width 100%
+  .col__80px
+    margin 0 auto 20px auto
+  .section__seo_guard 
+    flex-direction column
+    h2 
+      font-size 30px
+  .section__serv-wrapper
+    flex-direction column
+    .col__60 
+    .col__40
+      width 100%
+  .section__serv__bg
+    height 300px
+  .section__adr
+    padding: 20px 20px;
+  .section__adr li 
+  .section__adr li span
+    font-size 16px
+  .main-menu__link:hover
+    color white
+  .main-menu__item_dropdown:hover > a
+    color orange !important
+  .main-menu__sub-menu
+    position: relative
+    width 100%
+  .main-menu__item 
+    overflow hidden
+  .section__blog__same__item img
+    width 100%
+  .section__blog__same__item
+    &:nth-child(even)
+      margin-right 0px
+  .section__team__items h2
+    font-size 30px
+    line-height 30px
+  .section__blog__footer-2 > .row 
+    flex-direction column
+    align-items flex-start
+  .section__blog__footer__socials
+    margin-bottom 20px
+  .main-menu__item_active a
+    color orange
+  .section__team__tabs__content
+    padding 20px
+  .section__team__tabs span
+    display: block
+    width 100%
+    text-align: center
+    background: white
+    border 1px solid border
+    border-radius 0px
+  .section__team__tabs span.active
+    background: orange
+    color white
+    padding 8px 10px
+    border-color orange
+    font-size 16px
+    border-radius 0px
+  .section__team__one .col__260
+    margin-bottom 20px
+    width 100%
+    img 
+      width 100%
+  .section__team__one
+    flex-direction column
+  .col__265-custom
+    display: none
+  .map-api 
+    height 400px
+  .hidden-checkbox
+    display: flex
+    flex-wrap wrap
+  .ch-select,
+  .chosen-container
+    display: none !important
+  .section__catalog__tab
+    .seciton__tab-content
+      margin 0 -20px
+  .section__catalog__tab__map-wrapper iframe
+    height 300px
+  .section__catalog__item__thumbs img
+    width 59px
+  .section__catalog__item 
+    margin-top 0px
+  .button_mid
+    font-size 14px
+  .section__catalog__tab-wrapper
+    span 
+      display: block
+      width 100%
+      position: relative
+      left 0px !important
+      border-radius 4px
+      border-bottom 1px solid border
+      &:nth-child(2)
+        border-top 1px solid transparent
+        border-bottom 1px solid transparent
+    span.active 
+      font-size 18px
+      background: orange 
+      color white
+      border-color orange
+  .section__catalog__tab-wrapper
+    border-bottom none
+  .section__catalog__item .col__50:last-child
+    display: none
+  .section__catalog__item__top
+    flex-direction column
+    align-items: baseline;
+  .section__catalog__item__torg
+    margin-top 10px
+  .hidden-slider
+    display: block
+  .section__catalog__item
+    margin-bottom 0px
+    flex-direction column 
+    .col__50 
+      width 100% !important
+      margin-right 0px
+  .main-menu__item
+    margin-right 0px
   .main-menu
     top: 50px;
     left: 0;
@@ -83,13 +414,12 @@
     height: auto;
     position: fixed
     padding 20px
-    z-index 2
     ul 
       flex-direction column
   .main-menu__link
     color white
     text-decoration none
-    padding 10px 0
+    padding 8px 0
     +after()
       display: none
   .header .col__82
@@ -150,13 +480,86 @@
     display: flex
     position fixed
     width 100%
-    z-index 2
+    z-index 10
     box-shadow 0 0 3px rgba(0,0,0, 0.3)
   .header
     padding-top 75px
+  .section__blog__footer
+  .section__blog__footer__link .row
+    flex-direction column
+    align-items flex-start
+  .section__blog__link
+    font-size 30px
+    line-height 30px
+  .section__blog__footer__link .row span::before
+    display: none
     
 
 +width-max(730px)
+  
+  .section__banner__subscribe
+    margin-top 10px
+    .banner__cols
+      .col__left 
+        display: none
+  .section__call__bg-2_reset
+    margin-top 0px !important
+  .banner__cols 
+    flex-direction row !important
+    .section__specialist__tooltip
+      width 20px 
+      height 20px
+      margin-bottom: -9px;
+      margin-left: -9px;
+    .col__right 
+      margin-bottom 20px
+    .section__specialist__item 
+      padding-left 10px
+      padding-top 0px 
+      display: block
+      width 96px !important
+      top -3px
+      margin-right 5px
+      img 
+        width 68px
+    .section__call__title
+      font-size 30px
+  body .col__105
+    display: none !important
+  .section__filter__bot
+    display: none
+  .section__call__close
+    position: relative
+    right auto 
+    left auto
+    top auto
+    margin-bottom 10px
+    text-align: right
+  .section__call__bg-2::before
+    display: none
+  .section__call__bg-2 .col__42, 
+  .section__call__bg-2 .col__40
+    margin-left 0px
+    width 100%
+  .section__call__bg-2
+    background: transparent
+    padding 20px 0
+    margin-top 20px
+    span 
+      margin-top 10px
+    .row 
+      flex-direction column
+  .section__banner
+    background: image-url('bg1.png') no-repeat bottom left blue
+
+
++width-max(730px)
+  .pagination a
+  .pagination li
+    width 38px 
+    height 38px
+    line-height 38px
+    font-size 18px
   .section__head__title
     font-size 22px
     font-weight bold
@@ -221,6 +624,7 @@
       align-items flex-end
     .button 
       margin-top 15px
+      border-radius 3px
   .button
     height 48px
     line-height @height - 3px
@@ -230,6 +634,7 @@
       align-items flex-end
     .button 
       margin-top 15px
+      border-radius 3px
   .section__head
     padding-bottom 30px
     overflow hidden
@@ -255,17 +660,134 @@
   .section__seo-wrapper 
     padding-top 35px
     padding-bottom 40px
+  .section__seo-wrapper_reset
+    padding-bottom 0px
+    padding-top 10px
+
+
++width-max(660px)
+  .custom-form .label__checkbox
+    margin-bottom 10px
+  .section__filter__bold
+    width 85px
+  .section__catalog
+    h2 
+      line-height 40px
+      margin-top 10px
+  .section__filter__checkbox
+    flex-wrap wrap
+  .section__filter__custom
+    padding-left 0px
+  .section__filter__hide span
+    font-size 14px
+  .section__filter__title
+    display: none
+  .section__filter__top-row
+  .section__filter__top-row-margin
+    width 100%
+    margin 0 0 10px 0 !important
+  .mobile-button 
+    margin 10px 0 20px 0
+  .hidden-select 
+    display: block
+  .desktop-select 
+    display: none
+  .section__filter__main-row
+    input:nth-child(4)
+      order 5 
+    div:nth-child(6)
+      order 4
+  .hidden-select
+    .button 
+      margin 0 auto
+      display: inherit;
+    a 
+      position relative
+      margin 10px auto 0 auto
+      display: block
+      width 106px
+  .section__filter-content
+    padding-bottom 20px
+    margin-top 0px
+  .submit 
+    margin-bottom 0px
+  .section__filter-content
+    display: none
+  .section__catalog h2
+    font-size 26px
+    line-height 28px
+
 
 +width-max(600px)
+  .col__200-rev 
+    margin 0 0 20px 0
+    width 100%
+  .section__review__single
+    flex-direction column
   .section__specialist__item
     display block !important
   .section__specialist__item:hover 
     box-shadow none
+  .section__filter__result__item
+    .auto__width 
+      display: none
+  .section__filter__result-view-1
+    .col_margin
+      width 100%
+      margin-right 0px
+
+
++width-max(570px)
+  .section__blog__same__item
+    margin-right 0px
+    width 100%
+
+
++width-max(500px)
+  .h2-button 
+    .button 
+      display: none
+  .section__review__item > .row 
+    flex-direction column
+    .col__165
+      width 100% 
+      margin-bottom 20px
+      img 
+        width 100%
 
 
 +width-max(464px)
+  .section__form-wrapper .button
+    margin-top 10px
+  .section__form-wrapper
+    padding 20px
+  .section__form__sp
+    margin-bottom 20px
+  .section__form-wrapper .form__label
+    flex-direction column
+    align-items flex-start
+  .label__span__form
+    margin 10px 0 5px 0
   .section__head__tabs span.active 
     +after()
       triangle(30px, 18px, bottom, orange)
       bottom -17px
-      left 34%
+      left 37%
+  .section__team__item > .row
+    flex-direction column 
+  .section__specialist__img
+    margin-bottom 20px
+  .section__team__clients
+    margin-bottom 10px
+  .section__team__tabs__content__item
+    flex-direction column
+  .col__120 
+    margin 0 0px 20px 0
+    img 
+      width 100%
+      
+
++width-max(405px)
+  .section__filter__bold
+    width 100%
+    margin-bottom 0px

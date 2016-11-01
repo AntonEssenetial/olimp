@@ -1,0 +1,50 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 1;
+  +header-menu-2()
+  section.section__catalog
+    .container-wrapper
+      +bread-crumbs([
+        'Главная страница',
+        'Каталог'
+      ])
+      h2 Кусок для MAP API карты 
+    .container-wrapper
+      .map-api-wrapper
+        .map-api__item-wrapper
+          .map-api__item.animated.fadeIn
+            .section__filter__result__item.section__filter__result__item_orange
+              .col__265.col_margin
+                .item__like-2
+                a(href="catalog-item.html")
+                  img(src="images/catalog/1.jpg", alt="")
+                .item-view-2
+                  .item__price 229 650 000 Р
+                  a(href='catalog-item.html').item__link-2 ул. Осанова,д 20а
+                  ul  
+                    li.item__list 
+                      <span> Этаж: </span> 2/3    
+                    li.item__list 
+                      <span> Площадь: </span> 38/18/8
+                  .item__adr Вологда, р-н Центр
+          span.map-api__price.map-api__price_orange.jsMap-item 229 650 000 Р
+        .map-api__item-wrapper
+          .map-api__item.animated.fadeIn
+            .section__filter__result__item
+              .col__265.col_margin
+                .item__like-2
+                a(href="catalog-item.html")
+                  img(src="images/catalog/1.jpg", alt="")
+                .item-view-2
+                  .item__price 229 650 000 Р
+                  a(href='catalog-item.html').item__link-2 ул. Осанова,д 20а
+                  ul  
+                    li.item__list 
+                      <span> Этаж: </span> 2/3    
+                    li.item__list 
+                      <span> Площадь: </span> 38/18/8
+                  .item__adr Вологда, р-н Центр
+          span.map-api__price.jsMap-item 229 650 000 Р
+    

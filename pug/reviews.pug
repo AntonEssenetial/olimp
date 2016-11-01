@@ -1,0 +1,45 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 3;
+  +header-menu-2()
+  section.section__catalog
+    .container-wrapper
+      +bread-crumbs([
+        'Главная страница',
+        'Отзывы'
+      ])
+      .row.between.center.h2-button
+        h2 Отзывы
+        a(href="").button.button_mid.button_rev.button_rev-icon Добавить отзыв
+  section.section__review
+    .container-wrapper
+      .row.section__review__item-wrapper.between
+        -for(var x=0;x<7;x++)
+          .col__48.section__review__item
+            .row
+              .col__165.satic.col_margin
+                .col__165_img
+                  img(src="images/review/1.jpg", alt="")
+              .auto__width
+                span.section__review__span Сделка проведена профессионально
+                p Канал «Наш дом Сбербанк» — это виртуальный офис Сбербанка, расположенный в здании из нескольких этажей. 
+                .row.center.section__review__img
+                  img(src="images/doc/3.jpg", alt="")
+                  span Анна Смирнова
+                a(href="review-single.html").button.button_mid.button_rev Читать подробнее
+        .col__48.section__review__item
+          .row
+            .col__165.satic.col_margin
+              .col__165_vid
+                img(src="images/review/1.jpg", alt="")
+            .auto__width
+              span.section__review__span Сделка проведена профессионально
+              p Канал «Наш дом Сбербанк» — это виртуальный офис Сбербанка, расположенный в здании из нескольких этажей. 
+              .row.center.section__review__img
+                img(src="images/doc/3.jpg", alt="")
+                span Анна Смирнова
+              a(href="review-single.html").button.button_mid.button_rev Читать подробнее
+      .section__pagination
+        +pagination

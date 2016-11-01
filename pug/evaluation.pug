@@ -1,0 +1,83 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 2;
+  +header-menu-2()
+  section.section__serv
+    .container-wrapper
+      .row.section__serv-wrapper
+        .col__60
+          h2 Оценка недвижимости в Вологде
+          h3 Узнайте бесплатно, за сколько и как быстро можно продать Вашу квартиру
+          ul
+            li 
+              p Поможем получить максимально возможную рыночную цену
+                span Вы будете увереннее в переговорах и сможете аргументировать цену покупателю
+            li 
+              p Расскажем как правильно подготовить квартиру к продаже без вложений
+                span Расскажем средний срок продажи квартир в вашем районе
+            li 
+              p Гарантируем безопасность расчетов и оформления сделки
+                span Получите рекомендации по подготовке квартиры, чтобы покупатели выбрали её среди похожих вариантов
+        .col__40.section__serv__bg.section__serv__bg-3
+          //- .section__serv__name
+          //-   span.section__serv__span-1 Юлия <br> Баталова
+          //-   span.section__serv__span-2 Эксперт по <br> недвижимости
+  section.section__call
+    .container-wrapper.section__call__bg.section__call__bg_ip
+      .row.center.between
+        .col__42.col_margin
+          .section__call__title Попросить перезвонить
+          p Оценить недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. 
+        .col__40
+          +call
+  section.section__form
+    .container-wrapper
+      .section__form-wrapper
+        span.section__form__sp Он-лайн оценка картиры/комнаты/дома
+        .row.section__form-wrp
+          .col__395.col_margin
+            form(action="").custom-form.custom-form_white
+              .form__label.row.center
+                span.label__span__form Объект *
+                select()
+                  option(value="") same value
+                  option(value="") same value 2
+                  option(value="") same value 3
+              .form__label.row.center
+                span.label__span__form Адрес*
+                input(type="text").form__input
+              .form__label.row.center
+                span.label__span__form Площадь*
+                input(type="text").form__input
+              .form__label.row.center
+                span.label__span__form Этаж*
+                input(type="text").form__input
+              .form__label.row.center
+                span.label__span__form Состояние*
+                select()
+                  option(value="") same value
+                  option(value="") same value 2
+                  option(value="") same value 3
+              .form__label.row.center
+                span.label__span__form Телефон*
+                input(type="text").form__input
+              .form__label.row.center
+                span.label__span__form Ваше имя*
+                input(type="text").form__input
+
+              input(type="text", value='Подобрать!').button.button_orange.button_mid
+          .auto__width
+            p Многие из нас задумываются о продаже своих объектов недвижимости, иногда через профессионалов рынка, агентов и брокеров по недвижимости, иногда самостоятельно, осуществляя сделку купли-продажи со знакомыми, или родственниками, либо же подавая объявления в различные средства массовой информации.
+            p Получить рыночную оценку квартиры можно от профессионального оценщика, либо от практикующего риэлтора, хорошо знающего рынок. Как показывает практика сами владельцы часто завышают стартовую стоимость, либо наоборот - занижают свои ожидания. 
+            p * — поля, обязательные для заполнения
+
+  section.section__seo-wrapper.section__seo-wrapper_reset 
+    .container-wrapper  
+      h2 SEO текст о недвидимости в Вологде
+      .row.between.section__seo 
+        .col__50.col_margin
+          p Мы создали мобильное приложение для поиска недвижимости в вашем городе, чтобы у вас был мгновенный доступ к просмотру объявлений по всем типам недвижимости (новостройки, «вторичка») в любом регионе России. Мобильное приложение ЦИАН предлагает интерактивный поиск объектов недвижимости на карте и рядом с вашим местоположением. Искать жилье или другие объекты недвижимости на ЦИАН.ру очень просто! Подробный и удобный фильтр поиска позволяет сразу же задать нужные параметры, вы быстро подберете нужный объект из предложенных вариантов.
+        .col__50
+          p Мобильное приложение ЦИАН предлагает интерактивный поиск объектов недвижимости на карте и рядом с вашим местоположением. Искать жилье или другие объекты недвижимости на ЦИАН.ру очень просто! Подробный и удобный фильтр поиска позволяет сразу же задать нужные параметры, вы быстро подберете нужный объект из предложенных вариантов.

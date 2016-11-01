@@ -1,0 +1,80 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 1;
+  +header-menu-2()
+  section.section__catalog
+    .container-wrapper
+      +bread-crumbs([
+        'Главная страница',
+        'Каталог'
+      ])
+      h2 Купить квартиру в Вологде
+    .section__banner.animated.fadeIn
+      .container-wrapper
+        .section__call__bg-2
+          .section__call__close.jsClose Закрыть окно
+          .row.center.between
+            .col__42.col_margin
+              .section__call__title Не хотите искать сами?
+                span Оставьте свой номер телфона и мы <br> перезвоним вам!
+            .col__40
+              +call
+    +filter()
+    .section__filter__bot
+      .container-wrapper
+        .row.section__filter__bottom.center
+          select()
+            option(value="Сначала самые свежие") Сначала самые свежие
+            option(value="Сначала самые несвежие") Сначала самые несвежие
+          .section__filter__checkbox.row.center.section__filter__row
+            label().label__checkbox
+              input(type="checkbox").input__checkbox
+              i
+              | Только с оранжевым ценником
+          .section__filter__view.end.row.center
+            a(href="catalog-map.html").section__filter__link-map.active
+            a(href="catalog-view-2.html").section__filter__link-view-1
+            a(href="catalog.html").section__filter__link-view-2
+    .section__filter__result 
+      .container-wrapper
+        .row.section__filter__result-map.between
+          .auto__width.map-api
+            .map-wrapper 
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48312.95762427546!2d-73.948089!3d40.815665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f66e2188a29f%3A0xb408afef09e2702e!2sHarlem%2C+New+York%2C+NY!5e0!3m2!1sen!2sru!4v1477390288899" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+          .col__265-custom
+            .custom-scroll.height__976
+              .section__filter__result__item
+                .col__265
+                  .item__like-2
+                  a(href="catalog-item.html")
+                    img(src="images/catalog/1.jpg", alt="")
+                  .item-view-2
+                    .item__price 229 650 000 Р
+                    a(href='catalog-item.html').item__link-2 2-комнатная, Центр, ул. Осаново, д. 20а
+                    .item__adr Вологда, р-н Центр
+              .section__filter__result__item.section__filter__result__item_orange
+                .col__265
+                  .item__like-2
+                  a(href="catalog-item.html")
+                    img(src="images/catalog/1.jpg", alt="")
+                  .item-view-2
+                    .item__price 229 650 000 Р
+                    a(href='catalog-item.html').item__link-2 2-комнатная, Центр, ул. Осаново, д. 20а
+                    .item__adr Вологда, р-н Центр
+              .section__filter__banner
+                .section__filter__banner__title Поможем <br> выбрать квартиру вашей мечты
+                .section__filter__banner__span Оставьте свой номер телефона и мы перезвоним вам!
+                .row.center-c 
+                  a(href="").button.button_orange Помогите мне
+              .section__filter__result__item
+                .col__265
+                  .item__like-2
+                  a(href="catalog-item.html")
+                    img(src="images/catalog/1.jpg", alt="")
+                  .item-view-2
+                    .item__price 229 650 000 Р
+                    a(href='catalog-item.html').item__link-2 2-комнатная, Центр, ул. Осаново, д. 20а
+                    .item__adr Вологда, р-н Центр
+    +seo

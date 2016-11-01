@@ -33,7 +33,32 @@
   +after('')
     retinaSprite($sprite_right_group)
     vam()
+    
 
+// Close
+.section__call__close
+  +before('')
+    sprite($sprite-close)
+    vam(-2px,0px 10px 0 0)
+    
+
+// Filter 
+.section__filter__hide
+  +before('')
+    sprite($sprite-down)
+    vam(, 0px 8px 0 0)
+.section__filter__link-map
+  sprite($sprite-map)
+.section__filter__link-view-1
+  sprite($sprite-view-2)
+.section__filter__link-view-2
+  sprite($sprite-view-3)
+.section__filter__link-map.active
+  sprite($sprite-map-active)
+.section__filter__link-view-1.active
+  sprite($sprite-view-2-active)
+.section__filter__link-view-2.active
+  sprite($sprite-view-3-active)
 
 // Media query 
 +width-max(760px)
@@ -53,4 +78,62 @@
     retinaSprite($sprite_s2_group)
   .section__services__icon-3
     retinaSprite($sprite_s3_group)
-  
+
+
+// Catalog item 
+.item__like-2
+  retinaSprite($sprite_like_group)
+  display: block
+.item__like
+  sprite($sprite-heart)
+  cursor pointer
+  display: block
+.item__like-2.active
+  retinaSprite($sprite_alike_group)
+  display: block
+.item__like.active
+  sprite($sprite-heart-active)
+  display: block
+.item__adr
+.item__adr2
+  +before('')
+    sprite($sprite-marker)
+    vam(, 0px 8px 0 0)
+    
+
+// Clients 
+.section__team__clients
+  +before('')
+    sprite($sprite-clients)
+    vam(2px,0px 10px 0 0 )
+    static()
+.section__team__objects
+  +before('')
+    sprite($sprite-objects)
+    vam(2px,0px 10px 0 0 )
+    static()
+
+
+// Reviews 
+.button_rev-icon
+  +before('')
+    sprite($sprite-rev)
+    vam(,0px 15px 0 0 )
+.col__165_vid 
+  position: relative
+  +before('')
+    sprite($sprite-vid)
+    position absolute
+    left 0px 
+    right 0px 
+    top 0px 
+    bottom 0px 
+    margin auto
+    
+
+// Contects 
+.icon-doc 
+  sprite($sprite-doc)
+  display: block
+.sh-icon
+  sprite($sprite-sh)

@@ -1,0 +1,70 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 3;
+  +header-menu-2()
+  section.section__catalog
+    .container-wrapper
+      +bread-crumbs([
+        'Главная страница',
+        'Отзывы',
+        'Сделка проведена профессионально'
+      ])
+      h2 Сделка проведена профессионально
+  section.section__review
+    .container-wrapper
+      .row.section__review__single 
+        .col__200-rev.static.col_margin
+          img(src="images/review/2.png", alt="")
+        .auto__width
+          .row
+            .col__left.auto__width
+              p «Все вложенные в программу страхования средства будут гарантированно возвращены клиенту по окончании срока действия программы даже в случае падения стоимости базового актива. Размер и сроки осуществления страховой выплаты являются безусловными обязательствами страховой компании и фиксируются в договоре страхования. Все вложенные в программу страхования средства будут гарантированно возвращены клиенту по окончании срока действия программы даже в случае падения стоимости базового актива. Размер и сроки осуществления страховой выплаты являются безусловными обязательствами страховой компании и фиксируются в договоре страхования.
+              p Все вложенные в программу страхования средства будут гарантированно возвращены клиенту по окончании срока действия программы даже в случае падения стоимости базового актива.
+              span.section__review__author Анна Смирнова
+            .col__right.section__review__docs
+              img(src="images/doc/4.png", alt="")
+
+    .section__banner.animated.fadeIn
+      .container-wrapper
+        .row.center
+          .col__105.section__specialist__item 
+            .section__specialist__img
+              img(src="images/background/bg9.jpg", alt="")
+              .section__specialist__tooltip 
+                span Лучший работник месяца
+          .auto__width.section__call__bg-2.section__call__bg-2_reset
+            .section__call__close.jsClose Закрыть окно
+            .row.center.between
+              .col__42.col_margin
+                .row.banner__cols
+                  .col__left
+                    .section__specialist__item 
+                      .section__specialist__img
+                        img(src="images/background/bg9.jpg", alt="")
+                        .section__specialist__tooltip 
+                  .col__right
+                    .section__call__title Маргарита Чернышова
+                    span + 7 900 500 37 76
+                    a(href="") margo@an-olimp.ru
+              .col__40.col__40_reset
+                span Оставьте телефон, и Маргарита свяжется с вами по уточнению информации данной квартиры
+                +call
+    .container-wrapper
+      .another-reviews
+        h2 Другие отзывы этого риелтера
+        .row.section__review__item-wrapper.between
+          -for(var x=0;x<3;x++)
+            .col__48.section__review__item
+              .row
+                .col__165.satic.col_margin
+                  .col__165_img
+                    img(src="images/review/1.jpg", alt="")
+                .auto__width
+                  span.section__review__span Сделка проведена профессионально
+                  p Канал «Наш дом Сбербанк» — это виртуальный офис Сбербанка, расположенный в здании из нескольких этажей. 
+                  .row.center.section__review__img
+                    img(src="images/doc/3.jpg", alt="")
+                    span Анна Смирнова
+                  a(href="review-single.html").button.button_mid.button_rev Читать подробнее

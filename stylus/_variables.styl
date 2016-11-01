@@ -45,10 +45,10 @@ $span-color = $dark
 
 
 // Heading - sive 
-$h1 = 48px
+$h1 = 40px
 $h2 = 36px
-$h3 = 36px
-$h4 = 24px
+$h3 = 26px
+$h4 = 18px
 $h5 = 20px
 $h6 = 14px
 $h-weight = 100
@@ -60,23 +60,24 @@ $col-margin = 30px
 
 
 // Label - input
-$input-size = 17px
+$input-size = 16px
 $input-color = $dark
 $input-background = white
-$input-border-radius = 0px
+$input-border-radius = 4px
 $input-height = 43px
 $input-margin = 10px 0 0 0 
 $label-margin = 0 0 20px 0
 $label-color = $dark 
 $label-size = 14px
-$input-padding = 10px
-$input-border-color = $border
+$input-padding = 0 10px
+$input-border-color = white
 $place-holder-default = grey2
 input-border()
   border 1px solid $input-border-color
   &:focus 
-    border-color $yellow
+    border-color $blue
     color $dark
+    box-shadow inset 0 0 3px rgba(0,0,0, 0.5)
 
 
 // Banner color link 
@@ -127,11 +128,11 @@ $placeholderFont = $body-font
 
 // Colors
 dark          =  #282828
-yellow        =  #f5aa00
+yellow        =  #f28902
 blue          =  #2763b0
 grey          =  #acaaaa
 soft          =  #f7fafc
-orange        =  #f39f33
+orange        =  #f28902
 green         =  #408c09
 purple        =  purple 
 pink          =  pink
@@ -312,6 +313,8 @@ textarea
 select
   -webkit-appearance: none;
   border-radius $input-border-radius
+  height $input-height
+  line-height $input-height - 3px
 input
 textarea
   border-radius $input-border-radius
@@ -324,12 +327,10 @@ textarea
   font-size $input-size
   input-border()
 select
-  border-radius $input-border-radius
   background: $input-background
   margin 0px 
   border none
   appearance none
-  border-radius (0px)
   font-family $placeholderFont
   color $input-color
   padding $input-padding
@@ -361,6 +362,7 @@ select
   display block
   width 100%
   height $input-height
+  line-height $input-height - 3px
   margin $input-margin
   input-border()
 .form__area
@@ -375,6 +377,7 @@ select
   display block
   width 100%
   height $input-height
+  line-height $input-height - 3px
   margin $input-margin
   border 1px solid border-grey
   background #232323
@@ -389,16 +392,11 @@ select
 input[type="checkbox"]
 input[type="radio"]
   display none
-label i
-  width 50px 
-  height 15px
-  background: brown6
-  display block
-  trs()
   
 
 // Custom checkbox
 .label__checkbox
+.label__radio
   margin 20px 0 0px 0 
   color dark
   font-size 14px 
@@ -406,30 +404,62 @@ label i
   display flex
   line-height 20px
   cursor pointer
-.label__checkbox i 
-  width 55px 
-  height 28px
+// Radio
+.label__radio i 
+  width 19px
+  height @width
+  background: white
+  border-radius (50%)
   display inline-block
   position relative
-  box-flex: 1;
-  flex: 0 0 auto;
-  border-radius (20px)
-  background: #eaeaea
   cursor pointer
+  border 1px solid white
   +after('')
-    width 28px 
-    height 28px 
-    background: #878787
+    trs()
+    width 5px 
+    height @width
+    background: black
+    display: block
+    margin 6px
     border-radius (50%)
+    display: none
+// Checkbox
+.label__checkbox i 
+  width 19px 
+  height @width
+  display inline-block
+  position relative
+  border-radius (2px)
+  background: white
+  cursor pointer
+  border 1px solid white
+  +after('')
+    width 8px 
+    height 5px 
+    border-radius (0%)
     display block
+    border-bottom: 3px solid #f5aa00;
+    border-left: 3px solid #f5aa00;
+    transform: rotateZ(-45deg);
     trs()
     margin-left 0px
+    left 3px 
+    top 3px
+    position: relative
+    display none
+// Custom checkbox
 .label__checkbox .input__checkbox:checked + i
-  border-color green2
-  &:after
-    margin-left 27px 
-    trs() 
-    background: yellow
+  border-color blue
+  +after()
+    display: block
+    trs()
+ // Custom radio   
+.label__radio .input__radio:checked + i
+  background: yellow
+  border-color black
+  +after()
+    display: block
+    trs()
     
     
 
@@ -791,6 +821,7 @@ th
 
 // Bread
 .bread-crumbs
+  margin-bottom 10px
   
 
   &__item
@@ -811,13 +842,13 @@ th
 // Custom scrollbar
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
 .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
-  background: red
+  background: orange
 .mCSB_scrollTools .mCSB_draggerRail
   background-color: border;
 .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar
 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar
   background-color: #fff; 
-  background-color: hover;
+  background-color: orange;
   
 
 // Acordion 
@@ -986,6 +1017,7 @@ th
   ul
     align-items: center;
     display flex
+    justify-content: center;
   li
     margin-right 10px
     width 45px 
@@ -999,14 +1031,19 @@ th
     line-height @height
     text-align: center
     color black2
+    font-size 26px
+    font-weight bold
     border-radius(50%)
     &:hover 
-      border-color red
+      border-color orange
+      background: orange
+      color white
   .active 
     a 
-      background: red
-      border-color red 
+      background: orange
+      border-color orange 
       color white
+      text-decoration: none 
   .previous_page.disabled
     opacity 0.5
     background: grey2

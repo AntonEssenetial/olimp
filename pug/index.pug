@@ -29,10 +29,7 @@ block content
           p Купить или снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. 
             span.dnone Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. 
         .col__40
-          .section__call__form
-            form(action="").row.center
-              input(type="text", placeholder='Введите номер телефона').form__input.form__input_reset.form__input_search
-              input.form__input_reset.button.button_orange(type="submit", value='Перезвонить!')
+          +call
   section.section__our-services
     .container-wrapper
       h2 Наши сервисы 
@@ -60,7 +57,6 @@ block content
           .section__specialist__img
             img(src="images/background/bg5.jpg", alt="")
             .section__specialist__tooltip 
-              span Лучший работник месяца
           a(href="").section__specialist__link Анна Иванова
           p Специализируется по центральной части города и району улицы Дальняя
           span.section__specialist__phone +7 921 232 37 76
@@ -68,11 +64,10 @@ block content
           .section__specialist__img
             img(src="images/background/bg6.jpg", alt="")
             .section__specialist__tooltip 
-              span Лучший работник месяца
           a(href="").section__specialist__link Константин Константинопольский
           p Специализируется по центральной части города и району улицы Дальняя
           span.section__specialist__phone +7 921 232 37 76
-        .col__24.section__specialist__item 
+        .col__24.section__specialist__item.active 
           .section__specialist__img
             img(src="images/background/bg7.jpg", alt="")
             .section__specialist__tooltip 
@@ -84,7 +79,6 @@ block content
           .section__specialist__img
             img(src="images/background/bg9.jpg", alt="")
             .section__specialist__tooltip 
-              span Лучший работник месяца
           a(href="").section__specialist__link Петр Петровский
           p Специализируется по центральной части города и району улицы Дальняя
           span.section__specialist__phone +7 921 232 37 76

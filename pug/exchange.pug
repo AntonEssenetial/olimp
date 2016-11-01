@@ -1,0 +1,135 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 2;
+  +header-menu-2()
+  section.section__serv
+    .container-wrapper
+      .row.section__serv-wrapper
+        .col__60
+          h2 Обмен недвижимости в Вологде
+          h3 Узнайте как выгодно обменять вашу квартиру
+          ul
+            li 
+              p Безопасная сделка
+                span Поможем провести сделку, чтобы вы гарантировано получили встречную квартиру
+            li 
+              p Обмен вашей квартиры
+                span Узнайте у специалиста размер доплаты/выплаты по вашему запросу
+            li 
+              p Обмен вторички на новостройку
+                span Предложим новостройку по привлекательной цене
+            li  
+              p Любая форма доплаты
+                span Поможем оформить ипотеку. Использовать маткапитал.
+        .col__40.section__serv__bg 
+  section.section__call
+    .container-wrapper.section__call__bg.section__call__bg_ip
+      .row.center.between
+        .col__42.col_margin
+          .section__call__title Попросить перезвонить
+          p Оценить недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. 
+        .col__40
+          +call
+  section.section__review.section__review_reset
+    .container-wrapper
+      .row.section__review__item-wrapper.between
+        -for(var x=0;x<2;x++)
+          .col__48.section__review__item
+            .row
+              .col__165.satic.col_margin
+                .col__165_img
+                  img(src="images/review/1.jpg", alt="")
+              .auto__width
+                span.section__review__span Сделка проведена профессионально
+                p Канал «Наш дом Сбербанк» — это виртуальный офис Сбербанка, расположенный в здании из нескольких этажей. 
+                .row.center.section__review__img
+                  img(src="images/doc/3.jpg", alt="")
+                  span Анна Смирнова
+                a(href="review-single.html").button.button_mid.button_rev Читать подробнее
+  section.section__form
+    .container-wrapper
+      .section__form-wrapper.section__wrapper_reset
+        form(action="").custom-form.custom-form_white.row.section__form-wrp.between.section__form-wrp_res
+          .col__46.col_margin
+            span.section__form__sp У меня есть:
+            .row.between.section__filter__main-row
+              .section__filter__top-row.static
+                select
+                  option(value="Квартира") Квартира
+                  option(value="Дом") Дом
+              .section__filter__radio.row.center.section__filter__top-row.desktop-select.sct_reset
+                .section__filter__title.section__filter__title_reset Комнат
+                .section__filter__radio-wrapper.row
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count' checked).input__radio.input__radio_reset
+                    i Студия
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count').input__radio.input__radio_reset
+                    i 1
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count').input__radio.input__radio_reset
+                    i 2
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count').input__radio.input__radio_reset
+                    i 3
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count').input__radio.input__radio_reset
+                    i 4+
+            .row.between.row_mar
+              .col__50.col_margin-2
+                input(type="text" placeholder='Улица').form__input
+              .col__50
+                input(type="text" placeholder='м').form__input
+            .row.between
+              .col__50.col_margin-2
+                input(type="text" placeholder='Ваше имя').form__input
+              .col__50
+                input(type="text" placeholder='Номер телефона').form__input
+          .col__46.col_margin
+            span.section__form__sp Подобрать мне обмен:
+            .row.section__filter__main-row
+              .section__filter__top-row.static
+                select
+                  option(value="Квартира") Квартира
+                  option(value="Дом") Дом
+              .section__filter__radio.row.center.section__filter__top-row.desktop-select.sct_reset
+                .section__filter__title.section__filter__title_reset Комнат
+                .section__filter__radio-wrapper.row
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count' checked).input__radio.input__radio_reset
+                    i Студия
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count').input__radio.input__radio_reset
+                    i 1
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count').input__radio.input__radio_reset
+                    i 2
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count').input__radio.input__radio_reset
+                    i 3
+                  label().label__radio.label__radio_reset
+                    input(type="radio" name='count').input__radio.input__radio_reset
+                    i 4+
+            .row
+              .row.between
+              .col__50.col_margin-2
+                input(type="text" placeholder='Ваше имя').form__input
+              .col__50
+                .row.center.section__filter__row.section__filter__responsive-row
+                  span.section__filter__bold Площадь
+                  .row.center.section__filter__subrow
+                    input(type="text" placeholder='От').form__input_short
+                    span.section__filter__separator -
+                    input(type="text" placeholder='До').form__input_short
+            input(type="submit" value='Подобрать!').button_mid.button.button_orange.button_res
+
+  section.section__seo-wrapper.section__seo-wrapper_reset 
+    .container-wrapper  
+      h2 SEO текст о недвидимости в Вологде
+      .row.between.section__seo 
+        .col__50.col_margin
+          p Мы создали мобильное приложение для поиска недвижимости в вашем городе, чтобы у вас был мгновенный доступ к просмотру объявлений по всем типам недвижимости (новостройки, «вторичка») в любом регионе России. Мобильное приложение ЦИАН предлагает интерактивный поиск объектов недвижимости на карте и рядом с вашим местоположением. Искать жилье или другие объекты недвижимости на ЦИАН.ру очень просто! Подробный и удобный фильтр поиска позволяет сразу же задать нужные параметры, вы быстро подберете нужный объект из предложенных вариантов.
+        .col__50
+          p Мобильное приложение ЦИАН предлагает интерактивный поиск объектов недвижимости на карте и рядом с вашим местоположением. Искать жилье или другие объекты недвижимости на ЦИАН.ру очень просто! Подробный и удобный фильтр поиска позволяет сразу же задать нужные параметры, вы быстро подберете нужный объект из предложенных вариантов.

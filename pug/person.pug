@@ -1,0 +1,62 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 5;
+  -var subId2 = 3;
+  +header-menu-2()
+  section.section__catalog
+    .container-wrapper
+      +bread-crumbs([
+        'Главная страница',
+        'О компании',
+        'Наша команда'
+      ])
+      h2 Наша команда
+  section.section__team
+    .container-wrapper
+      .row
+        .col__225
+          +sub-menu()
+        .auto__width.section__team__items.row.between
+          h3 Анна Иванович
+          .row.section__team__one
+            .col__260.col_margin
+              img(src="images/team/1.jpg", alt="")
+              .section__team__clients.center 30 счастливых клиентов
+              .section__team__objects.center 17 объектов в продаже
+            .auto__width.section__team__one__right
+              span.section__team__specialist Ведущий специалист
+              span.section__team__phone-2 +7 921 232 37 76
+              a(href="").section__team__mail anna@an-olimp.ru
+              p Сербская профессиональная теннисистка; победительница одного турнира Большого шлема в одиночном разряде; финалистка двух турниров Большого шлема в одиночном разряде; бывшая первая ракетка мира в одиночном разряде. Cербская профессиональная теннисистка; победительница одного турнира Большого шлема в одиночном разряде; финалистка двух турниров Большого шлема в одиночном разряде; бывшая первая ракетка мира в одиночном разряде.  
+              .section__team__doc
+                img(src="images/doc/1.jpg", alt="")
+          .section__team__tabs-wrapper.jsParent
+            .section__team__tabs
+              span.jsTab.active Отзывы
+              span.jsTab Объекты
+            .section__team__tabs__content
+              .jsCont.active.animated.fadeIn
+                -for(var x=0;x<2;x++)
+                  .row.section__team__tabs__content__item
+                    .col__120.col_margin
+                      img(src="images/doc/2.jpg", alt="").section__team__document
+                    .auto__width.section__team__tabs__auto-width
+                      p Большое спасибо за сербская профессиональная теннисистка; победительница одного турнира Большого шлема в одиночном разряде; финалистка двух турниров Большого шлема в одиночном разряде; бывшая первая ракетка мира в одиночном разряде.  Большого шлема в одиночном разряде; бывшая первая ракетка мира в одиночном разряде. 
+                      .row.center 
+                        img(src="images/user/1.jpg", alt="")
+                        span.section__team__user Анна Смирнова
+              .jsCont.animated.fadeIn
+                .f__row.section__filter__result-view-2
+                  -for (var x = 0 ; x < 3 ; x ++ )
+                    .f__col.section__filter__result__item.row
+                      .col__265.col_margin
+                        .item__like-2
+                        a(href="catalog-item.html")
+                          img(src="images/catalog/1.jpg", alt="")
+                        .item-view-2
+                          .item__price 229 650 000 Р
+                          a(href='').item__link-2 2-комнатная, Центр, ул. Осаново, д. 20а
+                          .item__adr Вологда, р-н Центр            
+

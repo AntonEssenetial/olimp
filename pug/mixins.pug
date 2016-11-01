@@ -1,28 +1,43 @@
 //- Navigation multi-level
-mixin main-menu(data)
-  nav.main-menu&attributes(attributes)
+mixin main-menu()
+  nav.main-menu
     ul.row
-      each item, i in data
-        if i === pageId
-          li.main-menu__item.main-menu__item_active
-            a(href=item.url).main-menu__link= item.title
-            if (item.submenu !== false)
-              +main-menu-submenu(item.submenu)
-        else
-          li.main-menu__item
-            a(href=item.url).main-menu__link= item.title
-            if (item.submenu !== false)
-              +main-menu-submenu(item.submenu)
-mixin main-menu-submenu(data)
-  ul.main-menu__sub-menu.animated.fadeIn&attributes(attributes)
-    each item, i in data
-      if i === subId
-        li.main-menu__sub-menu__item.main-menu__sub-menu__item_active
-          a(href=item.url).main-menu__sub-menu__link= item.title
-      else  
-        li.main-menu__sub-menu__item
-          a(href=item.url).main-menu__sub-menu__link= item.title
-
+      li.main-menu__item
+        a(href="new-buildings.html").main-menu__link Новостройки
+      li.main-menu__item.main-menu__item_active
+        a(href="catalog.html").main-menu__link Каталог
+      li.main-menu__item
+        span.main-menu__link Услуги
+        ul.main-menu__sub-menu.animated.fadeIn
+          li.main-menu__sub-menu__item
+            a(href="sel.html").main-menu__sub-menu__link Продавцу
+          li.main-menu__sub-menu__item
+            a(href="buy.html").main-menu__sub-menu__link Покупателю
+          li.main-menu__sub-menu__item
+            a(href="exchange.html").main-menu__sub-menu__link Обмен
+          li.main-menu__sub-menu__item
+            a(href="evaluation.html").main-menu__sub-menu__link Оценка
+          li.main-menu__sub-menu__item
+            a(href="mortgage.html").main-menu__sub-menu__link Ипотека
+      li.main-menu__item
+        a(href="reviews.html").main-menu__link Отзывы
+      li.main-menu__item
+        a(href="blog.html").main-menu__link Блог
+      li.main-menu__item
+        span.main-menu__link О компании
+        ul.main-menu__sub-menu.animated.fadeIn
+          li.main-menu__sub-menu__item
+            a(href="history.html").main-menu__sub-menu__link Исстория компании
+          li.main-menu__sub-menu__item
+            a(href="mission.html").main-menu__sub-menu__link Миссия
+          li.main-menu__sub-menu__item
+            a(href="vac.html").main-menu__sub-menu__link Вакансии
+          li.main-menu__sub-menu__item
+            a(href="team.html").main-menu__sub-menu__link Наша команда
+          li.main-menu__sub-menu__item
+            a(href="doc.html").main-menu__sub-menu__link Документы
+          li.main-menu__sub-menu__item
+            a(href="contacts.html").main-menu__sub-menu__link Контакты
 
 //- Navigation menu
 mixin nav(items)
@@ -101,13 +116,8 @@ mixin pagination
         a(href="") 4
       li
         a(href="") 5
-      li ...
-      li
-        a(href="") 100
-      li.previous_page.disabled
-        a(href="") Назад
-      li.next_page 
-        a(href="") Далее
+      li 
+        a(href="") 6
 
 
 //- slider 
@@ -131,7 +141,7 @@ mixin header-menu()
       .container-wrapper
         .row.between
           .col__18.row
-            a(href="").header__logo
+            a(href="index.html").header__logo
             .header__title
               span Агентство 
               span недвижимости
@@ -147,38 +157,7 @@ mixin header-menu()
                     span.str24 (8172) 70-41-70
                     a(href='').button.button_xs Заказать звонок
             .header__bottom
-              +main-menu([
-                {
-                  title: 'Новостройки',
-                  url: 'new-buildings.html',
-                  submenu: false
-                },
-                {
-                  title: 'Каталог',
-                  url: 'catalog.html',
-                  submenu: false
-                },
-                {
-                  title: 'Услуги',
-                  url: 'serveces.html',
-                  submenu: false
-                },
-                {
-                  title: 'Отзывы',
-                  url: 'reviews.html',
-                  submenu: false
-                },
-                {
-                  title: 'Блог',
-                  url: 'blog.html',
-                  submenu: false
-                },
-                {
-                  title: 'О компании',
-                  url: 'about.html',
-                  submenu: false
-                }
-              ])
+              +main-menu()
     .section__head.jsParent
       .container-wrapper
         .section__head__title Купить квартиру в Вологде
@@ -187,19 +166,71 @@ mixin header-menu()
           span.jsTab Продать
           span.jsTab Оценить
         .section__head__content-wrapper
-          .section__head__content.jsCont.active.animated.fadeInUp
+          .section__head__content.jsCont.active.animated.fadeIn
             form(action="").row.center
               input(type="text", placeholder='Введите адрес').form__input.form__input_reset.form__input_search
               input.button.form__input_reset.button_search(type='submit', value='Купить!')
-          .section__head__content.jsCont.animated.fadeInUp
+          .section__head__content.jsCont.animated.fadeIn
             form(action="").row.center
               input(type="text", placeholder='Введите адрес').form__input.form__input_reset.form__input_search
               input.button.form__input_reset.button_search(type='submit', value='Продать!')
-          .section__head__content.jsCont.animated.fadeInUp
+          .section__head__content.jsCont.animated.fadeIn
             form(action="").row.center
               input(type="text", placeholder='Введите адрес').form__input.form__input_reset.form__input_search
               input.button.form__input_reset.button_search(type='submit', value='Оценить!')
     +slider()
+
+
+
+//- Submenu
+mixin sub-menu-2()
+  +content-menu([
+    {
+      title: 'Продавцу',
+      url: 'sel.html'
+    },{
+      title: 'Покупателю',
+      url: 'buy.html'
+    },{
+      title: 'Обмен',
+      url: 'exchange.html'
+    },{
+      title: 'Оценка',
+      url: 'evaluation.html'
+    },{
+      title: 'Ипотека',
+      url: 'mortgage.html'
+    }
+  ])
+mixin sub-menu()
+  +content-menu([
+    {
+      title: 'Исстория компании',
+      url: 'history.html'
+    },{
+      title: 'Миссия',
+      url: 'mission.html'
+    },{
+      title: 'Вакансии',
+      url: 'vac.html'
+    },{
+      title: 'Наша команда',
+      url: 'team.html'
+    },{
+      title: 'Документы',
+      url: 'doc.html'
+    },{
+      title: 'Контакты',
+      url: 'contacts.html'
+    }
+  ])
+mixin content-menu(data)
+  menu
+    each item, i in data
+      if i === subId2
+        a(href=item.url).menu__link.menu__link_active= item.title
+      else  
+        a(href=item.url).menu__link= item.title
 
 
 //- header menu 
@@ -214,7 +245,7 @@ mixin header-menu-2()
       .container-wrapper
         .row.between
           .col__18.row
-            a(href="").header__logo
+            a(href="index.html").header__logo
             .header__title
               span Агентство 
               span недвижимости
@@ -230,35 +261,192 @@ mixin header-menu-2()
                     span.str24 (8172) 70-41-70
                     a(href='').button.button_xs Заказать звонок
             .header__bottom
-              +main-menu([
-                {
-                  title: 'Новостройки',
-                  url: 'new-buildings.html',
-                  submenu: false
-                },
-                {
-                  title: 'Каталог',
-                  url: 'catalog.html',
-                  submenu: false
-                },
-                {
-                  title: 'Услуги',
-                  url: 'serveces.html',
-                  submenu: false
-                },
-                {
-                  title: 'Отзывы',
-                  url: 'reviews.html',
-                  submenu: false
-                },
-                {
-                  title: 'Блог',
-                  url: 'blog.html',
-                  submenu: false
-                },
-                {
-                  title: 'О компании',
-                  url: 'about.html',
-                  submenu: false
-                }
-              ])
+              +main-menu()
+
+
+//- call 
+mixin call()
+  .section__call__form
+    form(action="").row.center
+      input.auto__width(type="text", placeholder='Введите номер телефона').form__input.form__input_reset.form__input_search
+      input.form__input_reset.button.button_orange(type="submit", value='Перезвонить!')
+
+
+//- Filter 
+mixin filter()
+  .section__filter 
+    .container-wrapper
+      .section__filetr-modile.jsFilter.hidden-select
+        span Уточнить поиск
+        span Свренуть фильтр
+      .section__filter-content.animated.fadeIn
+        form(action="").custom-form
+          .row.section__filter__main-row
+            .section__filter__top-row
+              select
+                option(value="Квартира") Квартира
+                option(value="Дом") Дом
+            .section__filter__top-row.hidden-select
+              select
+                option(value="Количество комнат") Количество комнат
+                option(value="0") 0
+            .section__filter__radio.row.center.section__filter__top-row.desktop-select
+              .section__filter__title.section__filter__title_reset Комнат
+              .section__filter__radio-wrapper.row
+                label().label__radio.label__radio_reset
+                  input(type="radio" name='count' checked).input__radio.input__radio_reset
+                  i Студия
+                label().label__radio.label__radio_reset
+                  input(type="radio" name='count').input__radio.input__radio_reset
+                  i 1
+                label().label__radio.label__radio_reset
+                  input(type="radio" name='count').input__radio.input__radio_reset
+                  i 2
+                label().label__radio.label__radio_reset
+                  input(type="radio" name='count').input__radio.input__radio_reset
+                  i 3
+                label().label__radio.label__radio_reset
+                  input(type="radio" name='count').input__radio.input__radio_reset
+                  i 4+
+            input(type="text", placeholder='Улица').form__input.section__filter__top-row-margin.form__input_200
+            .section__filter__top-row-margin
+              select
+                option(value="Район города") Район города
+                option(value="Нарышковичи") Нарыкшковичи
+            .submit.desktop-select
+              input(type="submit" value='Найти').button.button_orange.button_sm
+              a(href="").save-search Сохранить поиск
+          .row.center-c.mobile-button
+            .section__filter__hide.jsHideFilter.hidden-select
+              span еще параметры
+              span скрыть дополнительные параметры
+          .jsHidden.section__filter__custom.animated.fadeInLeft
+            .row.center.section__filter__row.section__filter__responsive-row
+              span.section__filter__bold Цена
+              .row.center.section__filter__subrow
+                input(type="text" placeholder='От').form__input_short
+                span.section__filter__separator -
+                input(type="text" placeholder='До').form__input_short
+                span.section__filter__rouble руб.
+            .section__filter__radio.row.center.section__filter__responsive-row
+              .section__filter__bold Тип
+              .section__filter__radio-wrapper.row.section__filter__subrow.section__filter__row.desktop-select
+                label().label__radio.label__radio_reset
+                  input(type="radio" name='type' checked).input__radio.input__radio_reset
+                  i Неважно
+                label().label__radio.label__radio_reset
+                  input(type="radio" name='type').input__radio.input__radio_reset
+                  i Новостройка
+                label().label__radio.label__radio_reset
+                  input(type="radio" name='type').input__radio.input__radio_reset
+                  i Вторичное
+              .section__filter__checkbox.row.center.section__filter__row
+                select.ch-select(data-placeholder="Выберите" multiple) 
+                  option(value="") Кирпич
+                  option(value="") Монолит
+                  option(value="") Дерево
+                .hidden-checkbox.row
+                  label().label__checkbox
+                    input(type="checkbox").input__checkbox
+                    i
+                    | Кирпич
+                  label().label__checkbox
+                    input(type="checkbox").input__checkbox
+                    i
+                    | Монолит
+                  label().label__checkbox
+                    input(type="checkbox").input__checkbox
+                    i
+                    | Дерево
+            .row.center.section__filter__responsive-row
+              span.section__filter__bold Площадь
+              .row.center
+                span.section__filter__title.section__filter__title_magin.desktop-select Общая площадь
+                .row.center.section__filter__subrow.section__filter__row.desktop-select
+                  input(type="text" placeholder='От').form__input_short
+                  span.section__filter__separator -
+                  input(type="text" placeholder='До').form__input_short
+                  span.section__filter_m М
+              .row.center
+                span.section__filter__title.section__filter__title_magin Площадь кухни
+                .row.center.section__filter__subrow.section__filter__row
+                  input(type="text" placeholder='От').form__input_short
+                  span.section__filter__separator -
+                  input(type="text" placeholder='До').form__input_short
+                  span.section__filter_m М
+            .row.center.section__filter__responsive-row
+              .row.center.section__filter__responsive-row
+                span.section__filter__bold Этаж
+                .row.center.section__filter__subrow-1.section__filter__row
+                  input(type="text" placeholder='С').form__input_short
+                  span.section__filter__separator -
+                  input(type="text" placeholder='По').form__input_short
+              .row.center 
+                .section__filter__checkbox.row.center.section__filter__row
+                  label().label__checkbox
+                    input(type="checkbox").input__checkbox
+                    i
+                    | Не первый
+                  label().label__checkbox
+                    input(type="checkbox").input__checkbox
+                    i
+                    | Не последний
+            .row.center.section__filter__responsive-row
+              span.section__filter__bold Площадь
+              .section__filter__checkbox.row.center.section__filter__row
+                label().label__checkbox
+                  input(type="checkbox").input__checkbox
+                  i
+                  | С балконом
+                label().label__checkbox
+                  input(type="checkbox").input__checkbox
+                  i
+                  | Без балкона
+                label().label__checkbox
+                  input(type="checkbox").input__checkbox
+                  i
+                  | Не важно
+          .row.center-c
+            .section__filter__hide.jsHideFilter.desktop-select
+              span еще параметры
+              span скрыть дополнительные параметры
+          .submit.hidden-select
+            input(type="submit" value='Найти').button.button_orange.button_sm
+            a(href="").save-search Сохранить поиск
+
+
+//- seo 
+mixin seo()
+  section.section__seo-wrapper.section__seo-wrapper_reset  
+    .container-wrapper  
+      h2 SEO текст о недвидимости в Вологде
+      .section__seo 
+        p Мы создали мобильное приложение для поиска недвижимости в вашем городе, чтобы у вас был мгновенный доступ к просмотру объявлений по всем типам недвижимости (новостройки, «вторичка») в любом регионе России. Мобильное приложение ЦИАН предлагает интерактивный поиск объектов недвижимости на карте и рядом с вашим местоположением. Искать жилье или другие объекты недвижимости на ЦИАН.ру очень просто! Подробный и удобный фильтр поиска позволяет сразу же задать нужные параметры, вы быстро подберете нужный объект из предложенных вариантов.
+
+//- banner
+mixin banner()
+  .section__banner.animated.fadeIn
+    .container-wrapper
+      .row.center.section__banner__subscribe
+        .col__105.section__specialist__item 
+          .section__specialist__img
+            img(src="images/background/bg15.png", alt="")
+        .auto__width.section__call__bg-2.section__call__bg-3.section__call__bg-2_reset
+          .section__call__close.jsClose Закрыть окно
+          .row.center.between
+            .col__42.col_margin
+              .row.banner__cols
+                .col__left
+                  .section__specialist__item 
+                    .section__specialist__img
+                      img(src="images/background/bg9.jpg", alt="")
+                      .section__specialist__tooltip 
+                .col__right
+                  .section__call__title Хотите получать от на свежие статьи?
+                  span Оставьте свой e-mail и мы будем вам их высылать
+            .col__40.col__40_reset
+              span Какой-то дополнительный текст
+              .section__call__form
+                form(action="").row.center
+                  input(type="text", placeholder='Введите email').form__input.form__input_reset.form__input_search
+                  input.form__input_reset.button.button_orange(type="submit", value='Отпарвить!')

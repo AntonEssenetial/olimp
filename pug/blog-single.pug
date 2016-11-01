@@ -1,0 +1,67 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 4;
+  +header-menu-2()
+  section.section__catalog
+    .container-wrapper
+      +bread-crumbs([
+        'Главная страница',
+        'Блог',
+        'Как быстро продать квартиру?'
+      ])
+      h2 Блог
+  section.section__blog
+    .container-wrapper
+      .row
+        .col__225
+          +sub-menu()
+          .section__filter__banner.col__166
+            .section__filter__banner__title Поможем <br> выбрать <br> квартиру <br> вашей мечты
+            .section__filter__banner__span Оставьте свой номер телефона и мы перезвоним вам!
+            .row.center-c 
+              a(href="").button.button_orange Помогите мне
+        .col__80.section__team__items
+          h2 Как быстро продать квартиру
+          .section__blog__img
+            img(src="images/blog/1.jpg", alt="")
+          p Купить или снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. Достаточно отыскать чистую профессиональную базу объявлений о продаже или аренде недвижимости в Москве.
+          p Если вы решили продать или купить квартиру, снять или сдать жилую недвижимость или находитесь в поисках загородной или коммерческой недвижимости, то ЦИАН поможет вам! ЦИАН.ру — это самый удобный сайт для поиска недвижимости по точному адресу или по карте, с учётом всех интересующих вас параметров. На CIAN.RU — тысячи актуальных объявлений о продаже или аренде объектов недвижимости в Москве и по всей России, ежедневно на сайте появляются новые объявления. Объявления содержат описания объектов, информацию об инфраструктуре, фотографии, стоимость, контакты владельца.
+          .section__blog__slider
+            .slic-blog
+              .silde
+                img(src="images/blog/1.jpg", alt="")
+              .silde
+                img(src="images/blog/1.jpg", alt="")
+              .silde
+                img(src="images/blog/1.jpg", alt="")
+              .silde
+                img(src="images/blog/1.jpg", alt="")
+          p Если вы решили продать или купить квартиру, снять или сдать жилую недвижимость или находитесь в поисках загородной или коммерческой недвижимости, то ЦИАН поможет вам! ЦИАН.ру — это самый удобный сайт для поиска недвижимости по точному адресу или по карте, с учётом всех интересующих вас параметров. На CIAN.RU — тысячи актуальных объявлений о продаже или аренде объектов недвижимости в Москве и по всей России, ежедневно на сайте появляются новые объявления. Объявления содержат описания объектов, информацию об инфраструктуре, фотографии, стоимость, контакты владельца.
+          .section__blog__footer-2
+            .section__blog__socilas
+              span.section__blog__footer__soc Рассказать друзьям
+            .row.center.between
+              .section__blog__footer__socials
+                <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                <script src="//yastatic.net/share2/share.js"></script>
+                <div class="ya-share2" data-services="vkontakte,facebook,twitter"></div>
+              .section__blog__footer__tags
+                a(href="") Ипотека
+                span.section__blog__footer__separator /
+                a(href="") Новостройки
+                span.section__blog__footer__separator /
+                a(href="") Аренда
+    +banner()
+    .container-wrapper
+      .section__blog__same__content
+        h2 Похожие статьи
+      .row.section__blog__same
+        -for(var x=0;x<4;x++)
+          .section__blog__same__item
+            img(src="images/blog/3.jpg", alt="")
+            a(href="") Как быстро продать квартиру?
+            span 18.11.2016
+            p Купить или снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. 
+                  

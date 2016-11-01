@@ -1,0 +1,36 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 5;
+  -var subId2 = 3;
+  +header-menu-2()
+  section.section__catalog
+    .container-wrapper
+      +bread-crumbs([
+        'Главная страница',
+        'О компании',
+        'Наша команда'
+      ])
+      h2 Наша команда
+  section.section__team
+    .container-wrapper
+      .row
+        .col__225
+          +sub-menu()
+        .auto__width.section__team__items.row.between
+          -for (var x = 0 ; x < 7 ; x ++ )
+            .col__48.section__team__item
+              .row 
+                .section__team__left
+                  .section__specialist__img
+                    img(src="images/background/bg9.jpg", alt="")
+                    .section__specialist__tooltip 
+                .section__team__right
+                  a(href="person.html").section__team__name Анна Иванова
+                  .section__team__phone +7 921 232 37 76
+                  a(href="").section__team__mail anna@an-olimp.ru
+              p Квартира в жилом комплексе «Прибрежный», который находится на живописном берегу реки. На первой линии домов, с видом на реку Вологду. Огороженная территория ЖК «Прибрежный» круглосуточно охраняется.
+              .row.between
+                a(href="").section__team__clients.center 30 счастливых клиентов
+                a(href="").section__team__objects.center 17 объектов в продаже

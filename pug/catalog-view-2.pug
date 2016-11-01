@@ -1,0 +1,65 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 1;
+  +header-menu-2()
+  section.section__catalog
+    .container-wrapper
+      +bread-crumbs([
+        'Главная страница',
+        'Каталог'
+      ])
+      h2 Купить квартиру в Вологде
+    .section__banner.animated.fadeIn
+      .container-wrapper
+        .section__call__bg-2
+          .section__call__close.jsClose Закрыть окно
+          .row.center.between
+            .col__42.col_margin
+              .section__call__title Не хотите искать сами?
+                span Оставьте свой номер телфона и мы <br> перезвоним вам!
+            .col__40
+              +call
+    +filter()
+    .section__filter__bot
+      .container-wrapper
+        .row.section__filter__bottom.center
+          select()
+            option(value="Сначала самые свежие") Сначала самые свежие
+            option(value="Сначала самые несвежие") Сначала самые несвежие
+          .section__filter__checkbox.row.center.section__filter__row
+            label().label__checkbox
+              input(type="checkbox").input__checkbox
+              i
+              | Только с оранжевым ценником
+          .section__filter__view.end.row.center
+            a(href="catalog-map.html").section__filter__link-map
+            a(href="catalog-view-2.html").section__filter__link-view-1.active
+            a(href="catalog.html").section__filter__link-view-2
+    .section__filter__result 
+      .container-wrapper.f__container
+        .f__row.section__filter__result-view-2
+          .f__col.section__filter__result__item.section__filter__result__item_orange.row
+            .col__265.col_margin
+              .item__like-2
+              a(href="catalog-item.html")
+                img(src="images/catalog/1.jpg", alt="")
+              .item-view-2
+                .item__price 229 650 000 Р
+                a(href='').item__link-2 2-комнатная, Центр, ул. Осаново, д. 20а
+                .item__adr Вологда, р-н Центр
+          -for (var x = 0 ; x < 7 ; x ++ )
+            .f__col.section__filter__result__item.row
+              .col__265.col_margin
+                .item__like-2
+                a(href="catalog-item.html")
+                  img(src="images/catalog/1.jpg", alt="")
+                .item-view-2
+                  .item__price 229 650 000 Р
+                  a(href='catalog-item.html').item__link-2 2-комнатная, Центр, ул. Осаново, д. 20а
+                  .item__adr Вологда, р-н Центр
+    .section__pagination
+      .container-wrapper
+        +pagination
+    +seo

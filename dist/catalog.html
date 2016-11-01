@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Олимп</title>
@@ -31,7 +31,7 @@
           <div class="container-wrapper">
             <div class="row between">
               <div class="col__18 row">
-                <a class="header__logo" href=""></a>
+                <a class="header__logo" href="index.html"></a>
                 <div class="header__title">
                   <span>Агентство </span>
                   <span>недвижимости</span>
@@ -63,7 +63,24 @@
                         <a class="main-menu__link" href="catalog.html">Каталог</a>
                       </li>
                       <li class="main-menu__item">
-                        <a class="main-menu__link" href="serveces.html">Услуги</a>
+                        <span class="main-menu__link">Услуги</span>
+                        <ul class="main-menu__sub-menu animated fadeIn">
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="sel.html">Продавцу</a>
+                          </li>
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="buy.html">Покупателю</a>
+                          </li>
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="exchange.html">Обмен</a>
+                          </li>
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="evaluation.html">Оценка</a>
+                          </li>
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="mortgage.html">Ипотека</a>
+                          </li>
+                        </ul>
                       </li>
                       <li class="main-menu__item">
                         <a class="main-menu__link" href="reviews.html">Отзывы</a>
@@ -72,7 +89,27 @@
                         <a class="main-menu__link" href="blog.html">Блог</a>
                       </li>
                       <li class="main-menu__item">
-                        <a class="main-menu__link" href="about.html">О компании</a>
+                        <span class="main-menu__link">О компании</span>
+                        <ul class="main-menu__sub-menu animated fadeIn">
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="history.html">Исстория компании</a>
+                          </li>
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="mission.html">Миссия</a>
+                          </li>
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="vac.html">Вакансии</a>
+                          </li>
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="team.html">Наша команда</a>
+                          </li>
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="doc.html">Документы</a>
+                          </li>
+                          <li class="main-menu__sub-menu__item">
+                            <a class="main-menu__sub-menu__link" href="contacts.html">Контакты</a>
+                          </li>
+                        </ul>
                       </li>
                     </ul>
                   </nav>
@@ -95,121 +132,511 @@
           </div>
           <h2>Купить квартиру в Вологде</h2>
         </div>
-      </section>
-      <section class="section__call">
-        <div class="container-wrapper section__call__bg">
-          <div class="row center between">
-            <div class="col__42 col_margin">
-              <div class="section__call__title">Попросить перезвонить</div>
-              <p>Купить или снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски.
-                <span class="dnone">Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. </span>
-              </p>
-            </div>
-            <div class="col__40">
-              <div class="section__call__form">
-                <form class="row center" action="">
-                  <input class="form__input form__input_reset form__input_search" type="text" placeholder="Введите номер телефона">
-                  <input class="form__input_reset button button_orange" type="submit" value="Перезвонить!">
-                </form>
+        <div class="section__banner animated fadeIn">
+          <div class="container-wrapper">
+            <div class="section__call__bg-2">
+              <div class="section__call__close jsClose">Закрыть окно</div>
+              <div class="row center between">
+                <div class="col__42 col_margin">
+                  <div class="section__call__title">Не хотите искать сами?
+                    <span>Оставьте свой номер телфона и мы
+                      <br> перезвоним вам!</span>
+                  </div>
+                </div>
+                <div class="col__40">
+                  <div class="section__call__form">
+                    <form class="row center" action="">
+                      <input class="auto__width form__input form__input_reset form__input_search" type="text" placeholder="Введите номер телефона" />
+                      <input class="form__input_reset button button_orange" type="submit" value="Перезвонить!" />
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section__our-services">
-        <div class="container-wrapper">
-          <h2>Наши сервисы </h2>
-          <div class="row between section__our-services__items">
-            <div class="col__30 section__our-services__item">
-              <a class="section__our-services__img" href="">
-                <img src="images/background/bg2.jpg" alt="">
-              </a>
-              <a class="section__our-services__link" href="">Новостройки</a>
-              <p>Купить или снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. </p>
+        <div class="section__filter">
+          <div class="container-wrapper">
+            <div class="section__filetr-modile jsFilter hidden-select">
+              <span>Уточнить поиск</span>
+              <span>Свренуть фильтр</span>
             </div>
-            <div class="col__30 section__our-services__item">
-              <a class="section__our-services__img" href="">
-                <img src="images/background/bg3.jpg" alt="">
-              </a>
-              <a class="section__our-services__link" href="">Обмен</a>
-              <p>Снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. </p>
-            </div>
-            <div class="col__30 section__our-services__item">
-              <a class="section__our-services__img" href="">
-                <img src="images/background/bg4.jpg" alt="">
-              </a>
-              <a class="section__our-services__link" href="">Оценка</a>
-              <p>Купить или снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. </p>
+            <div class="section__filter-content animated fadeIn">
+              <form class="custom-form" action="">
+                <div class="row section__filter__main-row">
+                  <div class="section__filter__top-row">
+                    <select>
+                      <option value="Квартира">Квартира</option>
+                      <option value="Дом">Дом</option>
+                    </select>
+                  </div>
+                  <div class="section__filter__top-row hidden-select">
+                    <select>
+                      <option value="Количество комнат">Количество комнат</option>
+                      <option value="0">0</option>
+                    </select>
+                  </div>
+                  <div class="section__filter__radio row center section__filter__top-row desktop-select">
+                    <div class="section__filter__title section__filter__title_reset">Комнат</div>
+                    <div class="section__filter__radio-wrapper row">
+                      <label class="label__radio label__radio_reset">
+                        <input class="input__radio input__radio_reset" type="radio" name="count" checked="checked" />
+                        <i>Студия</i>
+                      </label>
+                      <label class="label__radio label__radio_reset">
+                        <input class="input__radio input__radio_reset" type="radio" name="count" />
+                        <i>1</i>
+                      </label>
+                      <label class="label__radio label__radio_reset">
+                        <input class="input__radio input__radio_reset" type="radio" name="count" />
+                        <i>2</i>
+                      </label>
+                      <label class="label__radio label__radio_reset">
+                        <input class="input__radio input__radio_reset" type="radio" name="count" />
+                        <i>3</i>
+                      </label>
+                      <label class="label__radio label__radio_reset">
+                        <input class="input__radio input__radio_reset" type="radio" name="count" />
+                        <i>4+</i>
+                      </label>
+                    </div>
+                  </div>
+                  <input class="form__input section__filter__top-row-margin form__input_200" type="text" placeholder="Улица" />
+                  <div class="section__filter__top-row-margin">
+                    <select>
+                      <option value="Район города">Район города</option>
+                      <option value="Нарышковичи">Нарыкшковичи</option>
+                    </select>
+                  </div>
+                  <div class="submit desktop-select">
+                    <input class="button button_orange button_sm" type="submit" value="Найти" />
+                    <a class="save-search" href="">Сохранить поиск</a>
+                  </div>
+                </div>
+                <div class="row center-c mobile-button">
+                  <div class="section__filter__hide jsHideFilter hidden-select">
+                    <span>еще параметры</span>
+                    <span>скрыть дополнительные параметры</span>
+                  </div>
+                </div>
+                <div class="jsHidden section__filter__custom animated fadeInLeft">
+                  <div class="row center section__filter__row section__filter__responsive-row">
+                    <span class="section__filter__bold">Цена</span>
+                    <div class="row center section__filter__subrow">
+                      <input class="form__input_short" type="text" placeholder="От" />
+                      <span class="section__filter__separator">-</span>
+                      <input class="form__input_short" type="text" placeholder="До" />
+                      <span class="section__filter__rouble">руб.</span>
+                    </div>
+                  </div>
+                  <div class="section__filter__radio row center section__filter__responsive-row">
+                    <div class="section__filter__bold">Тип</div>
+                    <div class="section__filter__radio-wrapper row section__filter__subrow section__filter__row desktop-select">
+                      <label class="label__radio label__radio_reset">
+                        <input class="input__radio input__radio_reset" type="radio" name="type" checked="checked" />
+                        <i>Неважно</i>
+                      </label>
+                      <label class="label__radio label__radio_reset">
+                        <input class="input__radio input__radio_reset" type="radio" name="type" />
+                        <i>Новостройка</i>
+                      </label>
+                      <label class="label__radio label__radio_reset">
+                        <input class="input__radio input__radio_reset" type="radio" name="type" />
+                        <i>Вторичное</i>
+                      </label>
+                    </div>
+                    <div class="section__filter__checkbox row center section__filter__row">
+                      <select class="ch-select" data-placeholder="Выберите" multiple="multiple">
+                        <option value="">Кирпич</option>
+                        <option value="">Монолит</option>
+                        <option value="">Дерево</option>
+                      </select>
+                      <div class="hidden-checkbox row">
+                        <label class="label__checkbox">
+                          <input class="input__checkbox" type="checkbox" />
+                          <i></i>Кирпич</label>
+                        <label class="label__checkbox">
+                          <input class="input__checkbox" type="checkbox" />
+                          <i></i>Монолит</label>
+                        <label class="label__checkbox">
+                          <input class="input__checkbox" type="checkbox" />
+                          <i></i>Дерево</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row center section__filter__responsive-row">
+                    <span class="section__filter__bold">Площадь</span>
+                    <div class="row center">
+                      <span class="section__filter__title section__filter__title_magin desktop-select">Общая площадь</span>
+                      <div class="row center section__filter__subrow section__filter__row desktop-select">
+                        <input class="form__input_short" type="text" placeholder="От" />
+                        <span class="section__filter__separator">-</span>
+                        <input class="form__input_short" type="text" placeholder="До" />
+                        <span class="section__filter_m">М</span>
+                      </div>
+                    </div>
+                    <div class="row center">
+                      <span class="section__filter__title section__filter__title_magin">Площадь кухни</span>
+                      <div class="row center section__filter__subrow section__filter__row">
+                        <input class="form__input_short" type="text" placeholder="От" />
+                        <span class="section__filter__separator">-</span>
+                        <input class="form__input_short" type="text" placeholder="До" />
+                        <span class="section__filter_m">М</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row center section__filter__responsive-row">
+                    <div class="row center section__filter__responsive-row">
+                      <span class="section__filter__bold">Этаж</span>
+                      <div class="row center section__filter__subrow-1 section__filter__row">
+                        <input class="form__input_short" type="text" placeholder="С" />
+                        <span class="section__filter__separator">-</span>
+                        <input class="form__input_short" type="text" placeholder="По" />
+                      </div>
+                    </div>
+                    <div class="row center">
+                      <div class="section__filter__checkbox row center section__filter__row">
+                        <label class="label__checkbox">
+                          <input class="input__checkbox" type="checkbox" />
+                          <i></i>Не первый</label>
+                        <label class="label__checkbox">
+                          <input class="input__checkbox" type="checkbox" />
+                          <i></i>Не последний</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row center section__filter__responsive-row">
+                    <span class="section__filter__bold">Площадь</span>
+                    <div class="section__filter__checkbox row center section__filter__row">
+                      <label class="label__checkbox">
+                        <input class="input__checkbox" type="checkbox" />
+                        <i></i>С балконом</label>
+                      <label class="label__checkbox">
+                        <input class="input__checkbox" type="checkbox" />
+                        <i></i>Без балкона</label>
+                      <label class="label__checkbox">
+                        <input class="input__checkbox" type="checkbox" />
+                        <i></i>Не важно</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row center-c">
+                  <div class="section__filter__hide jsHideFilter desktop-select">
+                    <span>еще параметры</span>
+                    <span>скрыть дополнительные параметры</span>
+                  </div>
+                </div>
+                <div class="submit hidden-select">
+                  <input class="button button_orange button_sm" type="submit" value="Найти" />
+                  <a class="save-search" href="">Сохранить поиск</a>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section__spectialist-wrapper">
-        <div class="container-wrapper">
-          <h2>Наши специалисты</h2>
-          <div class="row between section__specialist">
-            <div class="col__24 section__specialist__item">
-              <div class="section__specialist__img">
-                <img src="images/background/bg5.jpg" alt="">
-                <div class="section__specialist__tooltip">
-                  <span>Лучший работник месяца</span>
-                </div>
+        <div class="section__filter__bot">
+          <div class="container-wrapper">
+            <div class="row section__filter__bottom center">
+              <select>
+                <option value="Сначала самые свежие">Сначала самые свежие</option>
+                <option value="Сначала самые несвежие">Сначала самые несвежие</option>
+              </select>
+              <div class="section__filter__checkbox row center section__filter__row">
+                <label class="label__checkbox">
+                  <input class="input__checkbox" type="checkbox">
+                  <i></i>Только с оранжевым ценником</label>
               </div>
-              <a class="section__specialist__link" href="">Анна Иванова</a>
-              <p>Специализируется по центральной части города и району улицы Дальняя</p>
-              <span class="section__specialist__phone">+7 921 232 37 76</span>
-            </div>
-            <div class="col__24 section__specialist__item">
-              <div class="section__specialist__img">
-                <img src="images/background/bg6.jpg" alt="">
-                <div class="section__specialist__tooltip">
-                  <span>Лучший работник месяца</span>
-                </div>
+              <div class="section__filter__view end row center">
+                <a class="section__filter__link-map" href="catalog-map.html"></a>
+                <a class="section__filter__link-view-1" href="catalog-view-2.html"></a>
+                <a class="section__filter__link-view-2 active" href="catalog.html"></a>
               </div>
-              <a class="section__specialist__link" href="">Константин Константинопольский</a>
-              <p>Специализируется по центральной части города и району улицы Дальняя</p>
-              <span class="section__specialist__phone">+7 921 232 37 76</span>
-            </div>
-            <div class="col__24 section__specialist__item">
-              <div class="section__specialist__img">
-                <img src="images/background/bg7.jpg" alt="">
-                <div class="section__specialist__tooltip">
-                  <span>Лучший работник месяца</span>
-                </div>
-              </div>
-              <a class="section__specialist__link" href="">Артем Смирнов</a>
-              <p>Специализируется по центральной части города и району улицы Дальняя</p>
-              <span class="section__specialist__phone">+7 921 232 37 76</span>
-            </div>
-            <div class="col__24 section__specialist__item">
-              <div class="section__specialist__img">
-                <img src="images/background/bg9.jpg" alt="">
-                <div class="section__specialist__tooltip">
-                  <span>Лучший работник месяца</span>
-                </div>
-              </div>
-              <a class="section__specialist__link" href="">Петр Петровский</a>
-              <p>Специализируется по центральной части города и району улицы Дальняя</p>
-              <span class="section__specialist__phone">+7 921 232 37 76</span>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section__seo-wrapper">
-        <div class="container-wrapper">
-          <h2>SEO текст о недвидимости в Вологде</h2>
-          <div class="row between section__seo">
-            <div class="col__50 col_margin">
+        <div class="section__filter__result">
+          <div class="container-wrapper">
+            <div class="section__filter__result-view-1">
+              <div class="section__filter__result__item section__filter__result__item_orange row">
+                <div class="col__265 col_margin item-mobile-view">
+                  <div class="item__like-2"></div>
+                  <a href="catalog-item.html">
+                    <img src="images/catalog/1.jpg" alt="">
+                  </a>
+                  <div class="item-view-2">
+                    <div class="item__price">229 650 000 Р</div>
+                    <a class="item__link-2" href="catalog-item.html">2-комнатная, Центр, ул. Осаново, д. 20а</a>
+                    <div class="item__adr">Вологда, р-н Центр</div>
+                  </div>
+                </div>
+                <div class="auto__width row">
+                  <div class="auto__width">
+                    <span class="item__adr">Вологда, р-н Центр</span>
+                    <a class="item__link" href="catalog-item.html">2-комнатная, ул. Осаново, д. 20а</a>
+                    <p class="item__descr">Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).</p>
+                    <ul class="item__stats">
+                      <li class="item__stat">
+                        <span>Площадь:</span> 120 / 0 / 0 </li>
+                      <li class="item__stat">
+                        <span>Этаж:</span> 2 / 2 (Кирпичный)</li>
+                    </ul>
+                  </div>
+                  <div class="col__200">
+                    <div class="item__price">229 650 000 Р</div>
+                    <div class="item__old-price">379 650 000 Р</div>
+                    <div class="item__like"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__filter__result__item row">
+                <div class="col__265 col_margin item-mobile-view">
+                  <div class="item__like-2"></div>
+                  <a href="catalog-item.html">
+                    <img src="images/catalog/1.jpg" alt="">
+                  </a>
+                  <div class="item-view-2">
+                    <div class="item__price">229 650 000 Р</div>
+                    <a class="item__link-2" href="catalog-item.html">2-комнатная, Центр, ул. Осаново, д. 20а</a>
+                    <div class="item__adr">Вологда, р-н Центр</div>
+                  </div>
+                </div>
+                <div class="auto__width row">
+                  <div class="auto__width">
+                    <span class="item__adr">Вологда, р-н Центр</span>
+                    <a class="item__link" href="catalog-item.html">2-комнатная, ул. Осаново, д. 20а</a>
+                    <p class="item__descr">Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).</p>
+                    <ul class="item__stats">
+                      <li class="item__stat">
+                        <span>Площадь:</span> 120 / 0 / 0 </li>
+                      <li class="item__stat">
+                        <span>Этаж:</span> 2 / 2 (Кирпичный)</li>
+                    </ul>
+                  </div>
+                  <div class="col__200">
+                    <div class="item__price">229 650 000 Р</div>
+                    <div class="item__like"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__filter__result__item row">
+                <div class="col__265 col_margin item-mobile-view">
+                  <div class="item__like-2"></div>
+                  <a href="catalog-item.html">
+                    <img src="images/catalog/1.jpg" alt="">
+                  </a>
+                  <div class="item-view-2">
+                    <div class="item__price">229 650 000 Р</div>
+                    <a class="item__link-2" href="catalog-item.html">2-комнатная, Центр, ул. Осаново, д. 20а</a>
+                    <div class="item__adr">Вологда, р-н Центр</div>
+                  </div>
+                </div>
+                <div class="auto__width row">
+                  <div class="auto__width">
+                    <span class="item__adr">Вологда, р-н Центр</span>
+                    <a class="item__link" href="catalog-item.html">2-комнатная, ул. Осаново, д. 20а</a>
+                    <p class="item__descr">Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).</p>
+                    <ul class="item__stats">
+                      <li class="item__stat">
+                        <span>Площадь:</span> 120 / 0 / 0 </li>
+                      <li class="item__stat">
+                        <span>Этаж:</span> 2 / 2 (Кирпичный)</li>
+                    </ul>
+                  </div>
+                  <div class="col__200">
+                    <div class="item__price">229 650 000 Р</div>
+                    <div class="item__like"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__filter__result__item row">
+                <div class="col__265 col_margin item-mobile-view">
+                  <div class="item__like-2"></div>
+                  <a href="catalog-item.html">
+                    <img src="images/catalog/1.jpg" alt="">
+                  </a>
+                  <div class="item-view-2">
+                    <div class="item__price">229 650 000 Р</div>
+                    <a class="item__link-2" href="catalog-item.html">2-комнатная, Центр, ул. Осаново, д. 20а</a>
+                    <div class="item__adr">Вологда, р-н Центр</div>
+                  </div>
+                </div>
+                <div class="auto__width row">
+                  <div class="auto__width">
+                    <span class="item__adr">Вологда, р-н Центр</span>
+                    <a class="item__link" href="catalog-item.html">2-комнатная, ул. Осаново, д. 20а</a>
+                    <p class="item__descr">Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).</p>
+                    <ul class="item__stats">
+                      <li class="item__stat">
+                        <span>Площадь:</span> 120 / 0 / 0 </li>
+                      <li class="item__stat">
+                        <span>Этаж:</span> 2 / 2 (Кирпичный)</li>
+                    </ul>
+                  </div>
+                  <div class="col__200">
+                    <div class="item__price">229 650 000 Р</div>
+                    <div class="item__like"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__filter__result__item row">
+                <div class="col__265 col_margin item-mobile-view">
+                  <div class="item__like-2"></div>
+                  <a href="catalog-item.html">
+                    <img src="images/catalog/1.jpg" alt="">
+                  </a>
+                  <div class="item-view-2">
+                    <div class="item__price">229 650 000 Р</div>
+                    <a class="item__link-2" href="catalog-item.html">2-комнатная, Центр, ул. Осаново, д. 20а</a>
+                    <div class="item__adr">Вологда, р-н Центр</div>
+                  </div>
+                </div>
+                <div class="auto__width row">
+                  <div class="auto__width">
+                    <span class="item__adr">Вологда, р-н Центр</span>
+                    <a class="item__link" href="catalog-item.html">2-комнатная, ул. Осаново, д. 20а</a>
+                    <p class="item__descr">Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).</p>
+                    <ul class="item__stats">
+                      <li class="item__stat">
+                        <span>Площадь:</span> 120 / 0 / 0 </li>
+                      <li class="item__stat">
+                        <span>Этаж:</span> 2 / 2 (Кирпичный)</li>
+                    </ul>
+                  </div>
+                  <div class="col__200">
+                    <div class="item__price">229 650 000 Р</div>
+                    <div class="item__like"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__filter__result__item row">
+                <div class="col__265 col_margin item-mobile-view">
+                  <div class="item__like-2"></div>
+                  <a href="catalog-item.html">
+                    <img src="images/catalog/1.jpg" alt="">
+                  </a>
+                  <div class="item-view-2">
+                    <div class="item__price">229 650 000 Р</div>
+                    <a class="item__link-2" href="catalog-item.html">2-комнатная, Центр, ул. Осаново, д. 20а</a>
+                    <div class="item__adr">Вологда, р-н Центр</div>
+                  </div>
+                </div>
+                <div class="auto__width row">
+                  <div class="auto__width">
+                    <span class="item__adr">Вологда, р-н Центр</span>
+                    <a class="item__link" href="catalog-item.html">2-комнатная, ул. Осаново, д. 20а</a>
+                    <p class="item__descr">Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).</p>
+                    <ul class="item__stats">
+                      <li class="item__stat">
+                        <span>Площадь:</span> 120 / 0 / 0 </li>
+                      <li class="item__stat">
+                        <span>Этаж:</span> 2 / 2 (Кирпичный)</li>
+                    </ul>
+                  </div>
+                  <div class="col__200">
+                    <div class="item__price">229 650 000 Р</div>
+                    <div class="item__like"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__filter__result__item row">
+                <div class="col__265 col_margin item-mobile-view">
+                  <div class="item__like-2"></div>
+                  <a href="catalog-item.html">
+                    <img src="images/catalog/1.jpg" alt="">
+                  </a>
+                  <div class="item-view-2">
+                    <div class="item__price">229 650 000 Р</div>
+                    <a class="item__link-2" href="catalog-item.html">2-комнатная, Центр, ул. Осаново, д. 20а</a>
+                    <div class="item__adr">Вологда, р-н Центр</div>
+                  </div>
+                </div>
+                <div class="auto__width row">
+                  <div class="auto__width">
+                    <span class="item__adr">Вологда, р-н Центр</span>
+                    <a class="item__link" href="catalog-item.html">2-комнатная, ул. Осаново, д. 20а</a>
+                    <p class="item__descr">Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).</p>
+                    <ul class="item__stats">
+                      <li class="item__stat">
+                        <span>Площадь:</span> 120 / 0 / 0 </li>
+                      <li class="item__stat">
+                        <span>Этаж:</span> 2 / 2 (Кирпичный)</li>
+                    </ul>
+                  </div>
+                  <div class="col__200">
+                    <div class="item__price">229 650 000 Р</div>
+                    <div class="item__like"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="section__filter__result__item row">
+                <div class="col__265 col_margin item-mobile-view">
+                  <div class="item__like-2"></div>
+                  <a href="catalog-item.html">
+                    <img src="images/catalog/1.jpg" alt="">
+                  </a>
+                  <div class="item-view-2">
+                    <div class="item__price">229 650 000 Р</div>
+                    <a class="item__link-2" href="catalog-item.html">2-комнатная, Центр, ул. Осаново, д. 20а</a>
+                    <div class="item__adr">Вологда, р-н Центр</div>
+                  </div>
+                </div>
+                <div class="auto__width row">
+                  <div class="auto__width">
+                    <span class="item__adr">Вологда, р-н Центр</span>
+                    <a class="item__link" href="catalog-item.html">2-комнатная, ул. Осаново, д. 20а</a>
+                    <p class="item__descr">Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).</p>
+                    <ul class="item__stats">
+                      <li class="item__stat">
+                        <span>Площадь:</span> 120 / 0 / 0 </li>
+                      <li class="item__stat">
+                        <span>Этаж:</span> 2 / 2 (Кирпичный)</li>
+                    </ul>
+                  </div>
+                  <div class="col__200">
+                    <div class="item__price">229 650 000 Р</div>
+                    <div class="item__like"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__pagination">
+          <div class="container-wrapper">
+            <div class="pagination">
+              <ul>
+                <li>
+                  <a href="">1</a>
+                </li>
+                <li>
+                  <a href="">2</a>
+                </li>
+                <li class="active">
+                  <a href="">3</a>
+                </li>
+                <li>
+                  <a href="">4</a>
+                </li>
+                <li>
+                  <a href="">5</a>
+                </li>
+                <li>
+                  <a href="">6</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <section class="section__seo-wrapper section__seo-wrapper_reset">
+          <div class="container-wrapper">
+            <h2>SEO текст о недвидимости в Вологде</h2>
+            <div class="section__seo">
               <p>Мы создали мобильное приложение для поиска недвижимости в вашем городе, чтобы у вас был мгновенный доступ к просмотру объявлений по всем типам недвижимости (новостройки, «вторичка») в любом регионе России. Мобильное приложение ЦИАН предлагает
                 интерактивный поиск объектов недвижимости на карте и рядом с вашим местоположением. Искать жилье или другие объекты недвижимости на ЦИАН.ру очень просто! Подробный и удобный фильтр поиска позволяет сразу же задать нужные параметры, вы
                 быстро подберете нужный объект из предложенных вариантов.</p>
             </div>
-            <div class="col__50">
-              <p>Мобильное приложение ЦИАН предлагает интерактивный поиск объектов недвижимости на карте и рядом с вашим местоположением. Искать жилье или другие объекты недвижимости на ЦИАН.ру очень просто! Подробный и удобный фильтр поиска позволяет сразу
-                же задать нужные параметры, вы быстро подберете нужный объект из предложенных вариантов.</p>
-            </div>
           </div>
-        </div>
+        </section>
       </section>
       <footer class="footer">
         <div class="container-wrapper row">
@@ -243,6 +670,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="js/plugins/plugins.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.jquery.min.js"></script>
     <script src="js/all.js"></script>
   </body>
 </html>

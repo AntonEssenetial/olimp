@@ -8,6 +8,8 @@
 .form__input_search
   font-size 22px
   padding-left 20px
+  &:focus 
+    box-shadow none
   
 
 // Slider 
@@ -47,3 +49,611 @@
 // Main-menu 
 .main-menu.active 
   display: block
+  
+
+// Filter 
+.label__radio_reset 
+  margin-top 0px 
+  i 
+    height 42px
+    width auto
+    line-height 40px
+    border-radius 0
+    padding 0 15px
+    font-style normal
+    font-size 16px
+    color grey
+    background: grey2
+    border-color transparent
+    +after() 
+      display: none !important
+  &:first-child
+    i 
+      border-radius 4px 0 0 4px
+  &:last-child 
+    i 
+      border-radius 0 4px 4px 0
+.label__radio .input__radio_reset:checked + i
+  color dark
+  border-color blue
+  background: white
+  box-shadow inset 0 0 3px rgba(0,0,0, 0.3)
+.input__radio_reset
+  height 42px 
+  line-height 40px
+.button_sm 
+  font-size 16px
+  height 43px 
+  line-height 40px
+  padding 0 50px
+.section__filter__checkbox
+  label
+    margin 0px
+    font-size 16px
+.section__filter-content
+  select 
+    font-size 16px
+.section__filter__rouble
+  margin-left 15px 
+.section__filter__bold 
+  font-weight bold
+  height 43px 
+  line-height 40px
+  width 100px
+  margin-bottom 15px
+.form__input_short 
+  width 75px
+  +placeholder()
+    color grey
+.section__filter__separator 
+  margin 0 10px
+.chosen-container
+  height 43px 
+.chosen-container-multi .chosen-choices li.search-choice
+  border none 
+  background: transparent
+  box-shadow none
+.chosen-container .chosen-choices 
+  box-shadow none
+.chosen-container-multi .chosen-choices li.search-field input[type=text]
+  height 43px 
+  line-height 40px
+  font-size 16px
+  color: #acaaaa;
+.chosen-container-multi .chosen-choices li.search-choice
+  margin-top 13px
+.chosen-container-multi .chosen-choices
+  height 43px
+  border 1px solid border 
+  border-radius 4px
+  padding-right 70px
+  padding-left 10px
+  background: image-url('bg13.png') no-repeat right white
+.section__filter__bottom
+  .ch-select
+  select 
+    padding-right 70px
+    background: image-url('bg13.png') no-repeat right white
+  .label__checkbox
+    margin-right 30px
+    i 
+      margin-right 10px
+.custom-form 
+  .ch-select
+  select 
+    width 100%
+    padding-right 70px
+    background: image-url('bg13.png') no-repeat right white
+  .label__checkbox
+    margin-right 30px
+    i 
+      margin-right 10px
+.section__filter__title_reset 
+  margin-right 10px
+.section__filter__title_magin
+  margin-right 10px
+  margin-bottom 15px
+.section__filter_m
+  margin-left 15px
+  +after('2')
+    font-size 10px
+    position: relative
+    top -5px
+.save-search 
+  font-size 14px
+  margin-top 5px
+  margin-left 20px
+  position absolute
+.submit 
+  position: relative
+  margin-bottom 25px
+.form__input_200 
+  width 216px
+.hidden-select 
+  display: none
+.jsHidden
+  display: none
+.jsHideFilter
+  span:last-child
+    display: none
+.jsHideFilter.active 
+  span:last-child
+    display: inline-block
+  span:first-child
+    display: none
+.section__filter__hide
+  cursor pointer
+.section__filter__hide.active
+  +before('')
+    transform rotateZ(180deg)
+.section__filetr-modile
+  background: orange
+  text-align: center
+  border-radius 4px
+  margin-top 20px
+  height 60px
+  line-height 57px
+  cursor pointer
+  span 
+    color white 
+    font-size 19px
+    font-weight bold 
+  span:last-child
+    display: none
+.section__filter-content.active 
+  display: block
+.section__filetr-modile.active 
+  span:last-child
+    display block 
+  span:first-child
+    display: none
+.col__265
+  width 265px
+  position: relative
+  img
+  a
+    display: block
+  img 
+    width 100% 
+    height auto
+.col__200 
+  width 190px
+  margin-left 20px
+
+
+// Filter item 
+.item__adr 
+  font-size 14px 
+  display: block
+  margin 0 0 5px 0
+.item__link 
+  font-size 26px 
+  font-weight bold
+  margin 0 0 10px 0
+.item__descr 
+  padding 0 0 5px 0
+.item__stat 
+  span 
+    font-weight bold
+.item__price 
+  font-size 24px 
+  font-weight bold
+  color dark
+  background: grey2
+  height 40px 
+  line-height @height + 2px
+  text-align: center
+  position: relative
+  left 6px
+  +before('')
+    triangle(20px, 40px, left, grey2)
+    position absolute
+    top 0px 
+    left -20px
+.item__like 
+  margin 30px auto 0 auto
+  curosr pointer
+.section__filter__result__item_orange
+  .item__like
+    margin 10px auto 0 auto
+  .item__price 
+    background: orange
+    color white 
+    +before()
+      border-color: transparent orange transparent transparent;
+.item__old-price
+  color dark 
+  font-weight bold
+  padding-left 18px
+  margin 15px 0 0 0
+  text-decoration line-through
+.item-view-2
+  width 100%
+  z-index 1
+  top -20px
+  position: relative
+  .item__price
+    width 200px
+    margin 0 auto
+.item__link-2 
+  font-size 20px 
+  font-weight bold
+  margin 10px 0
+.item__like-2
+  position absolute
+  top 10px 
+  left @top
+  z-index 2
+  cursor pointer
+.item-mobile-view
+  .item__like-2
+  .item-view-2
+    display: none
+.section__filter__result-view-2
+  .section__filter__result__item
+    flex-grow 1
+    width 265px
+    .col__265
+      width 100%
+      margin-right 0px
+.map-wrapper 
+  height 100%
+  iframe 
+    height 100%
+    width 100%
+.section__filter__result-map
+  margin-bottom 30px
+.item__list 
+  font-size 14px 
+  display: inline-block
+  span 
+    font-weight bold
+.map-api-wrapper
+  padding 30px
+.map-api__item-wrapper
+  width 295px
+.map-api__item.jsVisible
+  display: block
+.map-api__item 
+  display: none
+  box-shadow 0 0 40px rgba(0,0,0, 0.3)
+  width 295px
+  padding 15px
+  position: relative
+  +after()
+    triangle(40px,15px,bottom,white)
+    display block
+    position: absolute
+    bottom -15px
+    left 43%
+  .item__link-2
+    margin-bottom 5px
+  ul 
+    margin-bottom 5px
+.map-api__price
+  width 120px
+  display: block
+  text-align: center
+  margin 30px auto
+  cursor pointer
+  background: blue 
+  font-size 12px 
+  font-weight bold
+  color white
+  border-radius 3px
+  height 22px 
+  line-height @height
+  padding 0 10px
+  position: relative
+  box-shadow 0 0 10px rgba(0,0,0, 0.3)
+  +after()
+    triangle(20px,10px,bottom,blue)
+    position absolute
+    bottom -10px
+    left 43%
+  &_orange 
+    background: orange
+    +after()
+      border-color orange transparent transparent transparent
+.col__105
+  static()
+  width 105px
+  position: relative
+  left 20px
+  z-index 1
+  padding 0px !important
+  &:hover 
+    box-shadow none !important
+.banner__cols 
+  .section__specialist__item 
+    display: none
+.button_mid 
+  font-size 16px
+  height 40px 
+  line-height @height - 3px
+.item__buttons 
+  margin 0 0 15px 0
+  .button 
+    margin-left 10px
+.col__336 
+  width 300px
+  background: grey2
+  text-align: center
+  position: relative
+  height 65px
+  margin-left 20px
+  justify-content: center;
+  margin-right 15px
+  +after()
+    triangle(20px, 65px, left, grey2) 
+    position absolute
+    left -20px
+    display: block
+    top 0px 
+    left -20px
+.section__catalog__tab-wrapper
+  border-bottom 1px solid border
+  margin-bottom 10px
+  span 
+    color blue
+    font-size 18px
+    border 1px solid border
+    border-radius 4px 4px 0 0 
+    border-bottom none
+    padding 10px 20px 
+    vertical-align: bottom
+    background white
+    position: relative
+    text-decoration: underline
+    &:nth-child(2)
+      position: relative
+      left -10px
+      z-index 2
+    &:nth-child(3)
+      z-index 1
+      position: relative
+      left -20px
+    &:first-child
+      z-index 3
+  .active 
+    padding 10px 20px
+    font-size 30px
+    color dark
+    z-index 4 !important
+    text-decoration: none
+    border-bottom 1px solid white
+    top 1px
+.hidden-slider
+  display: none
+  margin-bottom 20px
+  .section__catalog__item__silder-2
+    margin-left -20px 
+    margin-right -20px
+.main-menu__sub-menu
+  background: white
+  position absolute
+  z-index 3
+  padding 10px 20px 10px 20px
+  display: none
+  box-shadow 0 5px 10px rgba(0,0,0, 0.1)
+  li 
+    margin 5px 0
+.main-menu__item_dropdown
+  .main-menu__sub-menu
+    display: block
+    a 
+      color blue
+      font-weight bold
+  .main-menu__link
+    color black
+  .main-menu__link::after
+     height: 4px;
+     margin-top: 5px;
+     content: ' ';
+     -webkit-transition: ease-in-out .2s;
+     -moz-transition: ease-in-out .2s;
+     -ms-transition: ease-in-out .2s;
+     -o-transition: ease-in-out .2s;
+     transition: ease-in-out .2s;
+     background: #f28902;
+.hidden-checkbox
+  display: none
+.section__filter__banner
+  margin-bottom 30px
+.height__976
+  height 976px
+.col__265-custom
+  width 295px
+  .section__filter__banner
+  .col__265
+    margin-left 30px
+.mCSB_scrollTools
+  left 7px 
+  right auto
+
+
+// Sub menu 
+.col__225 
+  width 225px
+  menu 
+    display flex 
+    flex-direction column
+    margin-top 5px
+    
+
+// Banner
+.section__banner__subscribe 
+  padding-top 20px
+  margin-bottom 20px
+  .col__105 
+    left 0px
+.col__166
+  width 166px
+  margin-top 30px
+  padding 20px !important
+  .section__filter__banner__title
+    font-size 18px
+  .section__filter__banner__span
+    margin 10px 0 20px 0
+    font-size 13px
+  .button
+    font-size 13px !important
+    height 40px  !important
+    line-height 38px !important
+    padding 0 23px !important
+.col__225 
+  static()
+.bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item
+  display inline-block
+.bx-controls
+  position: relative
+  top auto
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto
+  position: relative
+  bottom auto
+.section__blog__slider
+  margin 0 0 10px 0
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active
+  background: blue
+.bx-wrapper .bx-pager.bx-default-pager a
+  background #b6b5b5
+  width 15px 
+  height @width
+  border-radius 50%
+.section__call__bg-3 
+  margin-top 0px !important
+  .section__call__title 
+    line-height: 37px;
+.button_rev 
+  height 30px !important
+  line-height 28px !important
+.col__165
+  width 165px
+.another-reviews 
+  padding 50px 0 0 0
+  h2 
+    margin-bottom 30px
+.col__200-rev 
+  width 200px
+  img
+    width 100%
+    display: block
+    
+
+// contacts 
+.company 
+  margin-top 40px
+  .icon-doc
+    margin-bottom 12px
+.section__spectialist-wrapper_reset 
+  margin-top 50px
+  margin-bottom 30px
+.section__seo-wrapper_reset
+  margin-top 30px
+  margin-bottom 20px
+body .section__call__bg_ip
+  padding 30px 20px
+  background: url(../images/background/bg17.png) no-repeat bottom right;
+.section__serv__span-1
+  display: block
+  font-weight bold 
+  font-size 20px
+  color dark
+  line-height 20px
+.section__serv__span-2
+  display: block
+  font-style 14px
+  color dark
+  line-height 15px
+.section__serv__name 
+  position absolute 
+  right 10px
+  top 14%
+  background: white
+  padding 10px
+.col__90_22 
+  p
+    font-size 22px
+    line-height 33px
+.section__guard 
+  margin-bottom 60px
+.col__80px 
+  width 100px 
+  static()
+.section__form-wrapper 
+  background: #ececec
+  border-radius 4px
+  padding 30px 30px 50px 30px
+  margin-top 50px
+  .button 
+    margin-top 40px
+  input 
+    margin-top 0px
+  .form__label
+    margin-bottom 8px
+.label__span__form
+  margin-right 20px
+  width 120px
+  static()
+.section__form__sp 
+  font-weight bold 
+  font-size 26px
+  margin 0 0 30px 0
+.section__form-wrp 
+  p 
+    padding-left 40px
+.col__395
+  width 395px 
+  static()
+body .section__review_reset
+  margin-top 40px
+  padding-bottom 0px
+  .section__review__item
+    margin-bottom 20px
+.section__form-wrapper
+  margin-top 10px
+body .sct_reset 
+  margin-right 0px
+.row_mar
+  margin-bottom 25px
+.col_margin-2
+  margin-right 20px
+.section__form 
+  .form__input_short
+    width 69px
+  .section__filter__bold
+    margin-bottom 0px
+    font-weight normal
+  .section__filter__subrow
+    margin-right 0px
+.button_res
+  margin-top 12px !important
+  float right
+  margin-right 2px
+  padding 0 40px !important
+.section__blog__slider
+  img 
+    width 100%
+.section__review__docs
+  static()
+.section__blog__same__item
+  span 
+    display: block
+.main-menu 
+  z-index 100
+.landscape
+  padding-bottom 70px !important
+.section__call__form
+  .button 
+    static()
+  .form__input
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+.main-menu__sub-menu
+  display: none
+.main-menu__item
+  &:hover  
+    .main-menu__sub-menu 
+      display: block
+    

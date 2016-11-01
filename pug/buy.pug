@@ -1,0 +1,37 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 2;
+  +header-menu-2()
+  section.section__serv
+    .container-wrapper
+      .row.section__serv-wrapper
+        .col__60
+          h2 Покупателю недвижимости в Вологде
+          h3 Купите квартиру мечты в Вологде по лучшей цене!
+          ul
+            li Экономим Ваши деньги. Знаем реальные цены сделок и отстаиваем Ваши интересы в переговорах с продавцами
+            li Поможем купить квартиру в любой новостройке Вологды или на вторичном рынке
+            li Экономим Ваше время. Своя база вторичного жилья
+            li Оплата наших услуг - только после совершения сделки
+        .col__40.section__serv__bg.section__serv__bg-2
+          //- .section__serv__name
+          //-   span.section__serv__span-1 Юлия <br> Баталова
+          //-   span.section__serv__span-2 Эксперт по <br> недвижимости
+  section.section__call
+    .container-wrapper.section__call__bg.section__call__bg_ip
+      .row.center.between
+        .col__42.col_margin
+          .section__call__title Попросить перезвонить
+          p Оценить недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. 
+        .col__40
+          +call
+  section.section__seo-wrapper.section__seo-wrapper_reset.section__guard
+    .container-wrapper  
+      h2 Гарантия защиты сделки
+      .row.between.section__seo.section__seo_guard
+        .col__80px.col_margin
+          .sh-icon
+        .auto__width.col__90_22
+          p Ответственность агентства застрахована в двух страховых компаниях. Защита клиента действует даже в случае, если услуга оказана добросовестно, но в последствии выявлены обстоятельства, имеющие недлагоприятные последствия для клиента агентства. 

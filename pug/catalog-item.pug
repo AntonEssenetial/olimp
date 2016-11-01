@@ -1,0 +1,118 @@
+extends layout
+include mixins.pug
+
+block content
+  -var pageId = 1;
+  +header-menu-2()
+  section.section__catalog
+    .container-wrapper
+      +bread-crumbs([
+        'Главная страница',
+        'Каталог',
+        'г. Вологда, ул. Леденцова, 8Б квартира с видом на реку'
+      ])
+      .row.section__catalog__item 
+        .col__50.col_margin
+          h2 ул. Леденцова, 8Б с видом на реку
+          .row.center.section__catalog__item__top
+            .section__catalog__item__price-wrapper.col__336.row.center
+              span.section__catalog__item__price  22 650 000 Р
+              spna.section__catalog__item__old-price 34 500 00 Р
+            .section__catalog__item__torg.auto__width
+              span возможен торг
+              a(href="") предложить свою цену
+          .section__catalog__item__content
+            span.section__catalog__item__span — 22 500 Р за м2
+            .section__catalog__item__content__mobile.hidden-slider
+              .row.item__buttons
+                a.button.button_mid(href="") Ипотека
+                a.button.button_orange.button_mid(href="") Записаться на просмотр
+              .section__catalog__item__silder-2
+                img(src="images/catalog/2.jpg", alt="")
+                img(src="images/catalog/2.jpg", alt="")
+                img(src="images/catalog/2.jpg", alt="")
+                img(src="images/catalog/2.jpg", alt="")
+              .section__catalog__item__thumbs-2.slick-thumbs-2.row.between
+                img(src="images/catalog/3.jpg", alt="")
+                img(src="images/catalog/3.jpg", alt="")
+                img(src="images/catalog/3.jpg", alt="")
+                img(src="images/catalog/3.jpg", alt="")
+            ul
+              li.section__catalog__item__list <span>Тип объекта:</span> квартира
+              li.section__catalog__item__list <span>Этаж: </span>7/9
+              li.section__catalog__item__list <span>Количество комнат:</span>  3
+              li.section__catalog__item__list <span>Площадь: </span>304 м2
+              li.section__catalog__item__list <span>Год постройки:</span> 2012
+              li.section__catalog__item__list <span>Тип постройки:</span>  Кирпичный
+            p Квартира в жилом комплексе «Прибрежный», который находится на живописном берегу реки. На первой линии домов, с видом на реку Вологду. Огороженная территория ЖК «Прибрежный» круглосуточно охраняется, на въезде расположена контрольно-пропускная система. 2 этажа, цоколь и мансарда. Огороженная территория ЖК «Прибрежный» круглосуточно охраняется, на въезде расположена контрольно-пропускная система. 2 этажа, цоколь и мансарда. Огороженная территория ЖК «Прибрежный» круглосуточно охраняется, на въезде расположена контрольно-пропускная система. 2 этажа, цоколь и мансарда.
+        .col__50
+          .row.end.item__buttons.desktop-select 
+            a.button.button_mid(href="") Ипотека
+            a.button.button_orange.button_mid(href="") Записаться на просмотр
+          .section__catalog__item__silder.desktop-select 
+            img(src="images/catalog/2.jpg", alt="")
+            img(src="images/catalog/2.jpg", alt="")
+            img(src="images/catalog/2.jpg", alt="")
+            img(src="images/catalog/2.jpg", alt="")
+          .section__catalog__item__thumbs.slick-thumbs.row.between.desktop-select
+            img(src="images/catalog/3.jpg", alt="")
+            img(src="images/catalog/3.jpg", alt="")
+            img(src="images/catalog/3.jpg", alt="")
+            img(src="images/catalog/3.jpg", alt="")
+    .section__banner.animated.fadeIn
+      .container-wrapper
+        .row.center
+          .col__105.section__specialist__item 
+            .section__specialist__img
+              img(src="images/background/bg9.jpg", alt="")
+              .section__specialist__tooltip 
+                span Лучший работник месяца
+          .auto__width.section__call__bg-2.section__call__bg-2_reset
+            .section__call__close.jsClose Закрыть окно
+            .row.center.between
+              .col__42.col_margin
+                .row.banner__cols
+                  .col__left
+                    .section__specialist__item 
+                      .section__specialist__img
+                        img(src="images/background/bg9.jpg", alt="")
+                        .section__specialist__tooltip 
+                  .col__right
+                    .section__call__title Маргарита Чернышова
+                    span + 7 900 500 37 76
+                    a(href="") margo@an-olimp.ru
+              .col__40.col__40_reset
+                span Оставьте телефон, и Маргарита свяжется с вами по уточнению информации данной квартиры
+                +call
+    .section__catalog__tab.section__catalog__tabs
+      .container-wrapper.jsParent
+        .section__catalog__tab-wrapper
+          span.jsTab.active Объект на карте
+          span.jsTab Панорама
+          span.jsTab Похожие рядом
+        .seciton__tab-content
+          .jsCont.active.animated.fadeIn
+            .section__catalog__tab__map-wrapper
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48312.95762427546!2d-73.948089!3d40.815665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f66e2188a29f%3A0xb408afef09e2702e!2sHarlem%2C+New+York%2C+NY!5e0!3m2!1sen!2sru!4v1477390288899" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+          .jsCont.animated.fadeIn
+            .section__catalog__tab__map-wrapper
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48312.95762427546!2d-73.948089!3d40.815665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f66e2188a29f%3A0xb408afef09e2702e!2sHarlem%2C+New+York%2C+NY!5e0!3m2!1sen!2sru!4v1477390288899" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+          .jsCont.animated.fadeIn
+            .section__catalog__tab__map-wrapper
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48312.95762427546!2d-73.948089!3d40.815665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f66e2188a29f%3A0xb408afef09e2702e!2sHarlem%2C+New+York%2C+NY!5e0!3m2!1sen!2sru!4v1477390288899" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+    .section__catalog__same-objects 
+      .container-wrapper
+        h2 Похожие объекты
+      .container-wrapper.f__container
+        .f__row.section__filter__result-view-2
+          -for (var x = 0 ; x < 4 ; x ++ )
+            .f__col.section__filter__result__item.row
+              .col__265.col_margin
+                .item__like-2
+                a(href="catalog-item.html")
+                  img(src="images/catalog/1.jpg", alt="")
+                .item-view-2
+                  .item__price 229 650 000 Р
+                  a(href='catalog-item.html').item__link-2 2-комнатная, Центр, ул. Осаново, д. 20а
+                  .item__adr Вологда, р-н Центр
+          

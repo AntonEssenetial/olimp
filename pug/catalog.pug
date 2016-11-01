@@ -11,78 +11,78 @@ block content
         'Каталог'
       ])
       h2 Купить квартиру в Вологде
-  section.section__call
-    .container-wrapper.section__call__bg
-      .row.center.between
-        .col__42.col_margin
-          .section__call__title Попросить перезвонить
-          p Купить или снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. 
-            span.dnone Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. 
-        .col__40
-          .section__call__form
-            form(action="").row.center
-              input(type="text", placeholder='Введите номер телефона').form__input.form__input_reset.form__input_search
-              input.form__input_reset.button.button_orange(type="submit", value='Перезвонить!')
-  section.section__our-services
-    .container-wrapper
-      h2 Наши сервисы 
-      .row.between.section__our-services__items
-        .col__30.section__our-services__item
-          a(href="").section__our-services__img
-            img(src="images/background/bg2.jpg", alt="")
-          a.section__our-services__link(href="") Новостройки
-          p Купить или снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. 
-        .col__30.section__our-services__item
-          a(href="").section__our-services__img
-            img(src="images/background/bg3.jpg", alt="")
-          a.section__our-services__link(href="") Обмен
-          p Снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. 
-        .col__30.section__our-services__item
-          a(href="").section__our-services__img
-            img(src="images/background/bg4.jpg", alt="")
-          a.section__our-services__link(href="") Оценка
-          p Купить или снять недвижимость — задача несложная, если знать, где искать и с чего начать поиски. Чтобы арендовать или купить недвижимость, не нужно ехать в агентство. 
-  section.section__spectialist-wrapper
-    .container-wrapper    
-      h2 Наши специалисты
-      .row.between.section__specialist
-        .col__24.section__specialist__item 
-          .section__specialist__img
-            img(src="images/background/bg5.jpg", alt="")
-            .section__specialist__tooltip 
-              span Лучший работник месяца
-          a(href="").section__specialist__link Анна Иванова
-          p Специализируется по центральной части города и району улицы Дальняя
-          span.section__specialist__phone +7 921 232 37 76
-        .col__24.section__specialist__item 
-          .section__specialist__img
-            img(src="images/background/bg6.jpg", alt="")
-            .section__specialist__tooltip 
-              span Лучший работник месяца
-          a(href="").section__specialist__link Константин Константинопольский
-          p Специализируется по центральной части города и району улицы Дальняя
-          span.section__specialist__phone +7 921 232 37 76
-        .col__24.section__specialist__item 
-          .section__specialist__img
-            img(src="images/background/bg7.jpg", alt="")
-            .section__specialist__tooltip 
-              span Лучший работник месяца
-          a(href="").section__specialist__link Артем Смирнов
-          p Специализируется по центральной части города и району улицы Дальняя
-          span.section__specialist__phone +7 921 232 37 76
-        .col__24.section__specialist__item 
-          .section__specialist__img
-            img(src="images/background/bg9.jpg", alt="")
-            .section__specialist__tooltip 
-              span Лучший работник месяца
-          a(href="").section__specialist__link Петр Петровский
-          p Специализируется по центральной части города и району улицы Дальняя
-          span.section__specialist__phone +7 921 232 37 76
-  section.section__seo-wrapper  
-    .container-wrapper  
-      h2 SEO текст о недвидимости в Вологде
-      .row.between.section__seo 
-        .col__50.col_margin
-          p Мы создали мобильное приложение для поиска недвижимости в вашем городе, чтобы у вас был мгновенный доступ к просмотру объявлений по всем типам недвижимости (новостройки, «вторичка») в любом регионе России. Мобильное приложение ЦИАН предлагает интерактивный поиск объектов недвижимости на карте и рядом с вашим местоположением. Искать жилье или другие объекты недвижимости на ЦИАН.ру очень просто! Подробный и удобный фильтр поиска позволяет сразу же задать нужные параметры, вы быстро подберете нужный объект из предложенных вариантов.
-        .col__50
-          p Мобильное приложение ЦИАН предлагает интерактивный поиск объектов недвижимости на карте и рядом с вашим местоположением. Искать жилье или другие объекты недвижимости на ЦИАН.ру очень просто! Подробный и удобный фильтр поиска позволяет сразу же задать нужные параметры, вы быстро подберете нужный объект из предложенных вариантов.
+    .section__banner.animated.fadeIn
+      .container-wrapper
+        .section__call__bg-2
+          .section__call__close.jsClose Закрыть окно
+          .row.center.between
+            .col__42.col_margin
+              .section__call__title Не хотите искать сами?
+                span Оставьте свой номер телфона и мы <br> перезвоним вам!
+            .col__40
+              +call
+    +filter()
+    .section__filter__bot
+      .container-wrapper
+        .row.section__filter__bottom.center
+          select()
+            option(value="Сначала самые свежие") Сначала самые свежие
+            option(value="Сначала самые несвежие") Сначала самые несвежие
+          .section__filter__checkbox.row.center.section__filter__row
+            label().label__checkbox
+              input(type="checkbox").input__checkbox
+              i
+              | Только с оранжевым ценником
+          .section__filter__view.end.row.center
+            a(href="catalog-map.html").section__filter__link-map
+            a(href="catalog-view-2.html").section__filter__link-view-1
+            a(href="catalog.html").section__filter__link-view-2.active
+    .section__filter__result 
+      .container-wrapper
+        .section__filter__result-view-1
+          .section__filter__result__item.section__filter__result__item_orange.row
+            .col__265.col_margin.item-mobile-view
+              .item__like-2
+              a(href="catalog-item.html")
+                img(src="images/catalog/1.jpg", alt="")
+              .item-view-2
+                .item__price 229 650 000 Р
+                a(href='catalog-item.html').item__link-2 2-комнатная, Центр, ул. Осаново, д. 20а
+                .item__adr Вологда, р-н Центр
+            .auto__width.row 
+              .auto__width
+                span.item__adr Вологда, р-н Центр
+                a(href="catalog-item.html").item__link 2-комнатная, ул. Осаново, д. 20а
+                p.item__descr Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).
+                ul.item__stats  
+                  li.item__stat <span>Площадь:</span> 120 / 0 / 0 
+                  li.item__stat <span>Этаж:</span> 2 / 2 (Кирпичный)
+              .col__200
+                .item__price 229 650 000 Р
+                .item__old-price 379 650 000 Р
+                .item__like
+          -for (var x = 0 ; x < 7 ; x ++ )
+            .section__filter__result__item.row
+              .col__265.col_margin.item-mobile-view
+                .item__like-2
+                a(href="catalog-item.html")
+                  img(src="images/catalog/1.jpg", alt="")
+                .item-view-2
+                  .item__price 229 650 000 Р
+                  a(href='catalog-item.html').item__link-2 2-комнатная, Центр, ул. Осаново, д. 20а
+                  .item__adr Вологда, р-н Центр
+              .auto__width.row 
+                .auto__width
+                  span.item__adr Вологда, р-н Центр
+                  a(href="catalog-item.html").item__link 2-комнатная, ул. Осаново, д. 20а
+                  p.item__descr Квартира с удобной планировкой. Потребует обновления ремонта (т.к. делали лет 15 назад). Пол деревянный. Балкон застеклен пластиком. Выход на балкон из кухни. Квартира выходит окнами на 3 стороны (юг, запад, север).
+                  ul.item__stats  
+                    li.item__stat <span>Площадь:</span> 120 / 0 / 0 
+                    li.item__stat <span>Этаж:</span> 2 / 2 (Кирпичный)
+                .col__200 
+                  .item__price 229 650 000 Р
+                  .item__like
+    .section__pagination
+      .container-wrapper
+        +pagination
+    +seo()
